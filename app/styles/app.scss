@@ -1,2 +1,14 @@
-@import 'bootstrap';
-@import 'bootstrap/theme';
+// Fix for Roboto font path
+$roboto-font-path: '../assets/';
+
+@import "components/color";
+$primary-color: #ffffff !default;
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
+
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+
+// Materialize styles
+@import "materialize";
+@import "main";
