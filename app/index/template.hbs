@@ -1,0 +1,34 @@
+<section class="about-us">
+  <h1>About Section</h1>
+  <h3>{{aboutSection.title}}</h3>
+  <p>{{aboutSection.description}}</p>
+  <div class="subsecton-navigation">
+    <h5>{{history.title}}</h5>
+    <p>{{history.description}}</p>
+    <h5>{{whyU.title}}</h5>
+    <p>{{whyU.description}}</p>
+    <h5>Awards</h5>
+    <ul>
+      {{#each awards as |award|}}
+      <li>Title: {{award.title}}</li>
+      <p>{{award.description}}</p>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+
+<section class="our-products">
+  <h1>Products section</h1>
+</section>
+
+<section class="chef-tips">
+  <h1>Chef tips section</h1>
+</section>
+
+<section class="news-section">
+  <h1>News section</h1>
+</section>
+
+<section class="contact-section">
+  <h1>Contact</h1>
+</section>
