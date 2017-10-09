@@ -3,13 +3,15 @@
     <h3>{{aboutSection.title}}</h3>
     <p>{{aboutSection.description}}</p>
   </div>
+
   <div class="about-us sub-links">
     <ul>
-      <li><a{{action "toggleSubLinks" 'isHistory' 'isWhyUs''isAwards' }}>History</a></li>
-      <li><a{{action "toggleSubLinks" 'isWhyUs' 'isHistory' 'isAwards' }}>About Us</a></li>
-      <li><a{{action "toggleSubLinks" 'isAwards' 'isWhyUs' 'isHistory'}}>Awards</a></li>
+      <li><a class="btn" {{action "toggleSubLinks" 'isHistory' 'isWhyUs''isAwards' }}>History</a></li>
+      <li><a class="btn" {{action "toggleSubLinks" 'isWhyUs' 'isHistory' 'isAwards' }}>About Us</a></li>
+      <li><a class="btn" {{action "toggleSubLinks" 'isAwards' 'isWhyUs' 'isHistory'}}>Awards</a></li>
     </ul>
   </div>
+  
   <div class="sub-link-container">
     {{#if isHistory}}
     <div class="history sub-link">

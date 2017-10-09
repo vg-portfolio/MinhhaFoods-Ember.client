@@ -13,18 +13,5 @@ export default Ember.Component.extend({
       this.set(subLink, true);
       console.log(subLink);
     },
-
-
-    toggleHistory(){
-      this.toggleSubLinks('isHistory');
-    },
-    toggleWhyUs(){
-      this.toggleProperty('isWhyUs');
-      console.log("toggled why Us");
-    },
-    toggleAwards(){
-      this.toggleProperty('isAwards');
-      console.log("toggled awards");
-    }
   }
 });

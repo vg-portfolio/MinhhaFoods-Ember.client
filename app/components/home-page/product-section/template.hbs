@@ -4,14 +4,12 @@
 
   <img src="" alt="">
   {{#each productCat as |cat|}}
-    <li>{{cat.catType}}</li>
+    <li><a class="btn" {{action "showProducts" cat}}>{{cat.catType}}</a></li>
   {{/each}}
 
-  <div class="subsecton-navigation">
-    {{!-- Load categories based on params ProductSection or ChefSection --}}
-    {{!-- {{#each categories as |category|}}
-    <h5>{{category.catType}}</h5>
-    <p>{{category.description}}</p>
-    {{/each}} --}}
+  <div class="selected-products-container">
+    {{#each selectedProducts as |product|}}
+      <li>{{product.title}}</li>
+    {{/each}}
   </div>
 </section>

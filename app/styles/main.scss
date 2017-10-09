@@ -1,13 +1,30 @@
 body {
-
+  text-align: center;
 }
 li {
   list-style: none;
   display: inline-block;
 }
 
-.header-section {
-  background-image: url("https://thumbs.dreamstime.com/z/pig-fried-green-dish-banana-leaf-background-food-75893140.jpg");
-  height: 40rem;
-  margin-top: -4.5rem;
+.banner-image img{
+  width: 100%;
+  margin-top: -64px;
+  margin-bottom: -5rem;
+}
+
+
+//PRODUCT SECTION
+.our-products {
+  background-color: green;
+}
+
+
+//NEWS SECTION
+.news-section {
+  background-color: gray;
+}
+
+//CONTACT SECTION
+.contact-section {
+  background-color: blue;
 }

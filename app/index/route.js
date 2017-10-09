@@ -22,6 +22,7 @@ export default Ember.Route.extend({
         return productSection.get('firstObject');
       }),
       categories: this.store.findAll('category'),
+      products: this.store.findAll('product'),
       chefSection: this.store.findAll('chef-section')
       .then((chefSection) => {
         return chefSection.get('firstObject');

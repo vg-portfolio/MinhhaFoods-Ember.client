@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   productCat: [],
+  selectedProducts: [],
 
   loadCategories: function(){
     this.get('categories').forEach((item) => {
@@ -12,5 +13,14 @@ export default Ember.Component.extend({
   }.on('init'),
 
   actions: {
+    showProducts(category){
+      this.get('selectedProducts').clear();
+      category.get('products')
+      .then((products) => {
+        products.forEach((product) => {
+          this.get('selectedProducts').pushObject(product);
+        });
+      });
+    }//showProducts
   }
 });
