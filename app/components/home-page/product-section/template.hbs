@@ -1,0 +1,17 @@
+<section class="our-products">
+  <h3>{{productSection.title}}</h3>
+  <p>{{productSection.description}}</p>
+
+  <img src="" alt="">
+  {{#each productCat as |cat|}}
+    <li>{{cat.catType}}</li>
+  {{/each}}
+
+  <div class="subsecton-navigation">
+    {{!-- Load categories based on params ProductSection or ChefSection --}}
+    {{!-- {{#each categories as |category|}}
+    <h5>{{category.catType}}</h5>
+    <p>{{category.description}}</p>
+    {{/each}} --}}
+  </div>
+</section>

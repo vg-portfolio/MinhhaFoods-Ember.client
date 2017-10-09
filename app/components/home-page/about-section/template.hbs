@@ -1,0 +1,45 @@
+<section class="about-us">
+  <div class="about-container">
+    <h3>{{aboutSection.title}}</h3>
+    <p>{{aboutSection.description}}</p>
+  </div>
+  <div class="about-us sub-links">
+    <ul>
+      <li><a{{action "toggleSubLinks" 'isHistory' 'isWhyUs''isAwards' }}>History</a></li>
+      <li><a{{action "toggleSubLinks" 'isWhyUs' 'isHistory' 'isAwards' }}>About Us</a></li>
+      <li><a{{action "toggleSubLinks" 'isAwards' 'isWhyUs' 'isHistory'}}>Awards</a></li>
+    </ul>
+  </div>
+  <div class="sub-link-container">
+    {{#if isHistory}}
+    <div class="history sub-link">
+      <h5>{{history.title}}</h5>
+      <img src="" alt="">
+      <p>{{history.description}}</p>
+    </div>
+    {{/if}}
+
+    {{#if isWhyUs}}
+    <div class="why-us sub-link">
+      <h5>{{whyU.title}}</h5>
+      <img src="" alt="">
+      <p>{{whyU.description}}</p>
+    </div>
+    {{/if}}
+
+    {{#if isAwards}}
+    <div class="awards sub-link">
+      <h5>Awards</h5>
+      <img src="" alt="">
+      <ul>
+        {{#each awards as |award|}}
+        <li>Title: {{award.title}}</li>
+        <img src="" alt="">
+        <p>{{award.description}}</p>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+  </div>
+
+</section>
