@@ -3,8 +3,13 @@
   <p>{{chefSection.description}}</p>
 
   <img src="" alt="">
-
   {{#each chefCat as |cat|}}
-  <li>{{cat.catType}}</li>
+    <li><a class="btn" {{action "showDishes" cat}}>{{cat.catType}}</a></li>
   {{/each}}
+
+  <div class="selected-dishes-container">
+    {{#each selectedDishes as |dish|}}
+      <li>{{dish.title}}</li>
+    {{/each}}
+  </div>
 </section>
