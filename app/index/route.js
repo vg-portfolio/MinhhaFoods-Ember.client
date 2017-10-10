@@ -27,7 +27,13 @@ export default Ember.Route.extend({
       .then((chefSection) => {
         return chefSection.get('firstObject');
       }),
-      dishes: this.store.findAll('dish')
+      dishes: this.store.findAll('dish'),
+      newsSection: this.store.findAll('news-section')
+      .then((section) => {
+        return section.get('firstObject');
+      }),
+      newsPosts: this.store.findAll('news-post'),
+      contact: this.store.findRecord('contact', 1)
     });
   },
 

@@ -1,1 +1,10 @@
-{{yield}}
+<section class="news-section">
+  <h3>{{newsSection.title}}</h3>
+  <p>{{newsSection.description}}</p>
+  <div class="news-posts-container">
+    {{#each newsPosts as |post|}}
+      <li>{{post.title}}</li>
+      <li>{{post.description}}</li>
+    {{/each}}
+  </div>
+</section>
