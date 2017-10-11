@@ -1,15 +1,45 @@
 <section class="our-products">
-  <h3>{{productSection.title}}</h3>
-  <p>{{productSection.description}}</p>
-
-  <img src="" alt="">
-  {{#each productCat as |cat|}}
-    <li><a class="btn" {{action "showProducts" cat}}>{{cat.catType}}</a></li>
-  {{/each}}
-
-  <div class="selected-products-container">
-    {{#each selectedProducts as |product|}}
-      <li>{{product.title}}</li>
-    {{/each}}
+  <div class="product-section-container">
+    <h4>{{productSection.title}}</h4>
+    <span>♡</span>
+    <p>{{productSection.description}}</p>
   </div>
+
+  <div class="product-section sub-links">
+    <ul>
+      {{#each productCat as |cat|}}
+        <li><a class="btn" {{action "showProducts" cat}}>{{cat.catType}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+
+
+  <!-- Adds flex box here to dynamically populate the the box with products without breaking layout-->
+    {{#each selectedProducts as |product|}}
+    <div class="image-row">
+      <div class="row">
+        <div class="col s4">
+          <a href="#"><img src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt=""></a>
+        </div>
+        <div class="col s4">
+          <a href="#"><img src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt=""></a>
+        </div>
+        <div class="col s4">
+          <a href="#"><img src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt=""></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <a href="#"><img src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt=""></a>
+        </div>
+        <div class="col s4">
+          <a href="#"><img src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt=""></a>
+        </div>
+        <div class="col s4">
+          <a href="#"><img src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt=""></a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+
 </section>

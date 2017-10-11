@@ -6,6 +6,6 @@ export default DS.Model.extend({
   categorizableType: DS.attr(),
   productSection: DS.belongsTo('product-section', { inverse: 'categories' }),
   chefSection: DS.belongsTo('chef-section', { inverse: 'categories'}),
-  products: DS.hasMany('product'),
-  dishes: DS.hasMany('dish')
+  products: DS.hasMany('product', { embedded: 'always' }),
+  dishes: DS.hasMany('dish', { embedded: 'always' })
 });

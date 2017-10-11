@@ -5,26 +5,51 @@ li {
   list-style: none;
   display: inline-block;
 }
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+div .navbar-fixed {
+  position: absolute;
+}
 
 .banner-image img{
   width: 100%;
-  margin-top: -64px;
-  margin-bottom: -5rem;
+  // margin-top: -5rem;
+  margin-bottom: -11em;
 }
 
+.section-heading {
+  margin-top: 0.3rem;
+}
+
+.sub-links {
+  margin-top: 3rem;
+}
+
+//ABOUT SECTION
+.image-row {
+  display: inline-block;
+  overflow-x: hidden;
+  .col {
+    padding: 0;
+  }
+  img {
+    width: 27rem;
+    height: auto;
+  }
+}
 
 //PRODUCT SECTION
 .our-products {
-  background-color: green;
+  padding-top: 3rem;
+  height: 50rem;
+  .image-row .row {
+    margin-bottom: 0;
+  }
 }
-
-
 //NEWS SECTION
-.news-section {
-  background-color: gray;
-}
+
 
 //CONTACT SECTION
-.contact-section {
-  background-color: blue;
-}
