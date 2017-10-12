@@ -1,13 +1,29 @@
 body {
-  text-align: center;
 }
+
+nav .nav-wrapper {
+  background: rgba(255,255,255,0);
+  img {
+    width: 35%;
+    margin-left: 9rem;
+  }
+}
+
+ul.navbar-links {
+  padding: 1rem 5rem;
+  a {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+}
+
 li {
   list-style: none;
   display: inline-block;
 }
 section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 5rem 3rem;
+  text-align: center;
 }
 
 div .navbar-fixed {
@@ -17,6 +33,7 @@ div .navbar-fixed {
 .banner-image img{
   width: 100%;
   // margin-top: -5rem;
+  margin-top: -6.5rem;
   margin-bottom: -11em;
 }
 
@@ -32,6 +49,8 @@ div .navbar-fixed {
 .image-row {
   display: inline-block;
   overflow-x: hidden;
+  margin-bottom: 0;
+  margin-top: 2rem;
   .col {
     padding: 0;
   }
@@ -44,12 +63,43 @@ div .navbar-fixed {
 //PRODUCT SECTION
 .our-products {
   padding-top: 3rem;
+  margin-bottom: 10rem;
   height: 50rem;
   .image-row .row {
     margin-bottom: 0;
   }
 }
+
+//CHEF SECTION
+.chef-section {
+  .chef-image-wrapper {
+    display: inline-block;
+    position: relative;
+    p {
+      position: absolute;
+      font-size: 2rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      color: white;
+      font-weight: 500;
+      display: none;
+    }
+    &:hover {
+      p {
+        display: block;
+      }
+    }
+  }
+}
+
 //NEWS SECTION
 
 
 //CONTACT SECTION
+
+
+
+@media query {
+
+}

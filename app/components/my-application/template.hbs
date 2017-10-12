@@ -1,29 +1,41 @@
-{{!-- <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    {{navbar-header}}
-
-    <div class="collapse navbar-collapse" id="navigation">
-      <ul class="nav navbar-nav">
-        {{#if isAuthenticated}}
-        <li>{{#link-to "users"}}Users{{/link-to}}</li>
-        {{/if}}
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        {{#if isAuthenticated}}
-        <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
-        <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
-        {{else}}
-        <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
-        <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
-        {{/if}}
-      </ul>
-    </div>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo left-align">
+      <!--Revise brando logo file to not have too much footprint-->
+      <img src="https://scontent.fbed1-2.fna.fbcdn.net/v/t34.0-12/22386585_1488323728132836_1171228041_n.png?oh=964aae4a20073f5bbe2417743a877440&oe=59E0D9CD" alt="">
+    </a>
+    {{!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> --}}
+    <ul class="navbar-links right hide-on-small-only">
+      {{#if isAuthenticated}}
+      <li>{{#link-to "users"}}Users{{/link-to}}</li>
+      <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+      <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
+      {{else}}
+      <li><a>Home</a></li>
+      <li><a>About Us</a></li>
+      <li><a>Products</a></li>
+      <li><a>Chef Tips</a></li>
+      <li><a>News</a></li>
+      <li><a>Contact Us</a></li>
+      {{!-- <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
+      <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li> --}}
+      {{/if}}
+    </ul>
+    {{!-- <ul class="side-nav" id="mobile-demo">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">Javascript</a></li>
+      <li><a href="mobile.html">Mobile</a></li>
+    </ul> --}}
   </div>
-</nav> --}}
-<div class="navbar-fixed">
+</nav>
+
+{{!--
+
+<div class="navbar">
   <nav class="transparent">
     <div class="nav-wrapper ">
-      <a href="/" class="brand-logo">Logo</a>
+      <a href="/" class="brand-logo align-left">Logo</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         {{#if isAuthenticated}}
@@ -43,7 +55,7 @@
       </ul>
     </div>
   </nav>
-</div>
+</div> --}}
 
 <div class='banner-image'>
   <img src="https://scontent.fbed1-2.fna.fbcdn.net/v/t35.0-12/22429095_1488319448133264_1131466422_o.png?oh=756238ec3f3438c5df3d57434b75f969&oe=59DF015B" alt="">

@@ -1,9 +1,9 @@
 <section class="about-us">
-  <div class="about-container">
+  <div class="about-container container">
     <span>Welcome to</span>
     <h4 class="section-heading">{{aboutSection.title}}</h4>
     <span>♡</span>
-    <p>{{aboutSection.description}}</p>
+    <p class="flow-text">{{aboutSection.description}}</p>
   </div>
 
   <div class="about-us sub-links">
@@ -30,7 +30,6 @@
     {{#if isHistory}}
     <div class="history sub-link">
       {{!-- <h5>{{history.title}}</h5> --}}
-      <img src="" alt="">
       <p>{{history.description}}</p>
     </div>
     {{/if}}
@@ -38,7 +37,6 @@
     {{#if isWhyUs}}
     <div class="why-us sub-link">
       {{!-- <h5>{{whyU.title}}</h5> --}}
-      <img src="" alt="">
       <p>{{whyU.description}}</p>
     </div>
     {{/if}}
@@ -46,7 +44,6 @@
     {{#if isAwards}}
     <div class="awards sub-link">
       {{!-- <h5>Awards</h5> --}}
-      <img src="" alt="">
       <ul>
         {{#each awards as |award|}}
         <li>Title: {{award.title}}</li>

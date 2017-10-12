@@ -1,11 +1,30 @@
-<section class="chef-tips">
-  <h3>{{chefSection.title}}</h3>
-  <p>{{chefSection.description}}</p>
+<section class="chef-section">
+  <div class="chef-container container">
+    <h4 class="section-heading">{{chefSection.title}}</h4>
+    <span>♡</span>
+    <p class="flow-text">{{chefSection.description}}</p>
+  </div>
 
-  <img src="" alt="">
-  {{#each chefCat as |cat|}}
-    <li><a class="btn" {{action "showDishes" cat}}>{{cat.catType}}</a></li>
-  {{/each}}
+  {{!-- <div class="chef sub-links">
+    <ul>
+    {{#each chefCat as |cat|}}
+      <li><a class="btn" {{action "showDishes" cat}}>{{cat.catType}}</a></li>
+    {{/each}}
+    </ul>
+  </div> --}}
+
+  <div class="image-row row">
+    {{#each chefCat as |cat|}}
+    <div class="col s4">
+      <div class="chef-image-wrapper valign-wrapper">
+        <a {{action "showDishes" cat}}>
+          <img src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt="">
+          <p>{{cat.catType}}</p>
+        </a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
 
   <div class="selected-dishes-container">
     {{#each selectedDishes as |dish|}}
