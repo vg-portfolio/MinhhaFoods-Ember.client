@@ -1,10 +1,19 @@
 <section class="news-section">
-  <h3>{{newsSection.title}}</h3>
-  <p>{{newsSection.description}}</p>
+  <div class="product-section-container">
+    <h4>{{newsSection.title}}</h4>
+    {{!-- <span>♡</span>
+    <p>{{newsSection.description}}</p> --}}
+  </div>
   <div class="news-posts-container">
+    <div class="row">
     {{#each newsPosts as |post|}}
-      <li>{{post.title}}</li>
-      <li>{{post.description}}</li>
+      <div class="col m4">
+        <div class="card-panel">
+          <li>{{post.title}}</li>
+          <li>{{post.description}}</li>
+        </div>
+      </div>
     {{/each}}
+    </div>
   </div>
 </section>

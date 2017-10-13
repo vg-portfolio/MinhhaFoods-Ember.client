@@ -17,11 +17,11 @@ export default Ember.Route.extend({
         return why.get('firstObject');
       }),
       awards: this.store.findAll('award'),
+      categories: this.store.findAll('category'),
       productSection: this.store.findAll('product-section')
       .then((productSection) => {
         return productSection.get('firstObject');
       }),
-      categories: this.store.findAll('category'),
       products: this.store.findAll('product'),
       chefSection: this.store.findAll('chef-section')
       .then((chefSection) => {
