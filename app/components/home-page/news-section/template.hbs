@@ -1,17 +1,21 @@
 <section class="news-section">
   <div class="product-section-container">
-    <h4>{{newsSection.title}}</h4>
-    {{!-- <span>♡</span>
-    <p>{{newsSection.description}}</p> --}}
+    <span>Our Network</span>
+    <h4 class="section-heading">{{newsSection.title}}</h4>
+    <span>♡</span>
+    {{!-- <p>{{newsSection.description}}</p> --}}
   </div>
+
   <div class="news-posts-container">
     <div class="row">
     {{#each newsPosts as |post|}}
       <div class="col m4">
-        <div class="card-panel">
+        <div class="card-panel hoverable">
           <li>{{post.title}}</li>
           <li>{{post.description}}</li>
         </div>
+        <h5>{{post.title}}</h5>
+        <p class="truncate">{{post.description}}</p>
       </div>
     {{/each}}
     </div>

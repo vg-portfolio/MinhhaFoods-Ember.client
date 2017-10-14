@@ -1,8 +1,50 @@
-<footer class="contact-section">
-  <h3>{{contact.title}}</h3>
-  <p>{{contact.description}}</p>
-  <li>{{companyName}}</li>
-  <li>Tel: {{contact.tel}}</li>
-  <li>Fax: {{contact.fax}}</li>
-  <li>Hotline: {{contact.hotline}}</li>
+<footer>
+  <section class="contact-section white-text">
+    <div class="row">
+      <div class="col s12 m6 left-align">
+        <h5>{{contact.title}}</h5>
+        <p>{{contact.description}}</p>
+      </div>
+    </div>
+    <div class="row left-align">
+      <div class="col m2">
+        <h6>About Us</h6>
+        <ul>
+          <li>{{whyU.title}}</li>
+          <li>{{history.title}}</li>
+          <li>{{awards.title}}</li>
+        </ul>
+      </div>
+      <div class="col m2">
+        <h6>Products</h6>
+        <ul>
+          {{#each productCat as |cat|}}
+          <li>{{cat.catType}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col m2">
+        <h6>Chef Tips</h6>
+        <ul>
+          {{#each chefCat as |cat|}}
+          <li>{{cat.catType}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col m2">
+        <h6>Latest News</h6>
+        <ul>
+          {{#each newsPosts as |news|}}
+          <li>{{news.title}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col m4">
+        <h6>Contact Us</h6>
+        <li><span>{{contact.companyName}}</span></li>
+        <li>Hotline: {{contact.hotline}}</li>
+        <li>Tel: {{contact.tel}} - Fax: {{contact.fax}}</li>
+      </div>
+    </div>
+  </section>
 </footer>

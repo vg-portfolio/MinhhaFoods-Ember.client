@@ -10,8 +10,10 @@ nav {
     z-index: 99;
   }
   img {
-    width: 35%;
-    margin-left: 9rem;
+    min-width: 25%;
+    float: left;
+    padding-left: 15em;
+    position: absolute;
   }
 }
 
@@ -29,8 +31,12 @@ ul.navbar-links {
 }
 
 li {
-  list-style: none;
   display: inline-block;
+  list-style: none;
+}
+
+.contact-section li {
+  display: block;
 }
 section {
   padding: 5rem 3rem;
@@ -97,7 +103,7 @@ section {
     p {
       position: absolute;
       font-size: 2rem;
-      top: 50%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -100%);
       color: white;
@@ -114,7 +120,7 @@ section {
 
 //NEWS SECTION
 .news-posts-container {
-  display: inline;
+  margin-top: 2rem;
 }
 
 
