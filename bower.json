@@ -6,5 +6,8 @@
     "ember-qunit-notifications": "0.1.0",
     "bootstrap-sass": "^3.3.7",
     "materialize": "0.97.6"
+  },
+  "resolutions": {
+    "materialize": "0.97.6"
   }
 }
