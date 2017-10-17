@@ -1,7 +1,89 @@
-<h2>Admin Route</h2>
+<div class="row">
+  <div class="col s12">
+  <div class="card">
+    <div class="card-content">
+      <!--About Section-->
+      <p><span class="card-title">About Section</span></p>
+      <li>Section title: {{aboutSection.title}}</li>
+      <li>Section body: {{aboutSection.description}}</li>
+      <div class="row">
+        <!--History-->
+        <div class="col s12 m4">
+          <div class="card-panel small">
+            <p><span class="card-title">History</span></p>
+            <li>Title: {{history.title}}</li>
+            <li>Body: {{history.description}}</li>
+          </div>
+        </div>
+        <!--About Us-->
+        <div class="col s12 m4">
+          <div class="card-panel small">
+            <p><span class="card-title">History</span></p>
+            <li>Title: {{history.title}}</li>
+            <li>Body: {{history.description}}</li>
+          </div>
+        </div>
+        <!--Awards-->
+        <div class="col s12 m4">
+          <div class="card-panel small">
+            <p><span class="card-title">Awards</span></p>
+            {{#each awards as |award|}}
+            <li>Title: {{award.title}}</li>
+            <li>Body: {{award.description}}</li>
+            {{/each}}
+          </div>
+        </div>
+      </div>
 
-<ul>
-  <li>Link to edit about</li>
-  <li>Link to edit Product Secton</li>
-  <li>Link to edit </li>
-</ul>
+    </div>
+    <div class="card-action">
+      <a href="#">This is a link</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+  <div class="card">
+    <div class="card-content">
+      <!--About Section-->
+      <p><span class="card-title">About Section</span></p>
+      <li>Section title: {{aboutSection.title}}</li>
+      <li>Section body: {{aboutSection.description}}</li>
+      <div class="row">
+        <!--History-->
+        <div class="col s12 m4">
+          <div class="card-panel small">
+            <p><span class="card-title">History</span></p>
+            <li>Title: {{history.title}}</li>
+            <li>Body: {{history.description}}</li>
+          </div>
+        </div>
+        <!--About Us-->
+        <div class="col s12 m4">
+          <div class="card-panel small">
+            <p><span class="card-title">History</span></p>
+            <li>Title: {{history.title}}</li>
+            <li>Body: {{history.description}}</li>
+          </div>
+        </div>
+        <!--Awards-->
+        <div class="col s12 m4">
+          <div class="card-panel small">
+            <p><span class="card-title">Awards</span></p>
+            {{#each awards as |award|}}
+            <li>Title: {{award.title}}</li>
+            <li>Body: {{award.description}}</li>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="card-action">
+      <a href="#">This is a link</a>
+    </div>
+  </div>
+</div>
+</div>

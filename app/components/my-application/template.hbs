@@ -7,7 +7,7 @@
     {{!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> --}}
     <ul class="navbar-links right hide-on-small-only">
       {{#if isAuthenticated}}
-      <li>{{#link-to "users"}}Users{{/link-to}}</li>
+      <li>{{#link-to "admin-route"}}Admin{{/link-to}}</li>
       <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
       <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
       {{else}}
