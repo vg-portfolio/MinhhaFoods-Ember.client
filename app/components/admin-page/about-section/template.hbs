@@ -9,37 +9,48 @@
         Save
       </button>
     </div>
-    <div class="row">
-      <!--History-->
-      <div class="col s12 m4">
-        <div class="card-panel small">
-          <p><span class="card-title">History</span></p>
-          <li>Title: {{history.title}}</li>
-          <li>Body: {{history.description}}</li>
-        </div>
-      </div>
-      <!--About Us-->
-      <div class="col s12 m4">
-        <div class="card-panel small">
-          <p><span class="card-title">History</span></p>
-          <li>Title: {{history.title}}</li>
-          <li>Body: {{history.description}}</li>
-        </div>
-      </div>
-      <!--Awards-->
-      <div class="col s12 m4">
-        <div class="card-panel small">
-          <p><span class="card-title">Awards</span></p>
-          {{#each awards as |award|}}
-          <li>Title: {{award.title}}</li>
-          <li>Body: {{award.description}}</li>
-          {{/each}}
-        </div>
-      </div>
-    </div>
-
   </div>
-  <div class="card-action">
+  <!-- Card actions -->
+  {{!-- <div class="card-action">
     <a href="#">This is a link</a>
+  </div> --}}
+</div>
+
+<div class="row">
+  <!--Awards-->
+  <div class="col s12 m12">
+    <div class="card-panel small">
+      <p><span class="card-title">Awards</span></p>
+      {{#each awards as |award|}}
+      <p>Title: {{award.title}}</p>
+      <p>Body: {{award.description}}</p>
+      {{/each}}
+    </div>
   </div>
+</div>
+
+<div class="row">
+  <!--History-->
+  <div class="col s12 m6">
+    <div class="card-panel small">
+        <p><span class="flow-text">History</span></p>
+        <p>Header:{{input value=history.title}}</p>
+        <p>Body: {{textarea value=history.description}}</p>
+    </div>
+    <button type="submit" class="btn btn-primary" {{action "updateHis"}}>
+      Save
+    </button>
+  </div>
+  <!--Why Us-->
+  <div class="col s12 m6">
+    <div class="card-panel small center-text">
+      <p><span class="flow-text">Why Us</span></p>
+      <p>Header: {{input value=whyU.title}}</p>
+      <p>Body: {{textarea value=whyU.description}}</p>
+    </div>
+    <button type="submit" class="btn btn-primary" {{action "updateHis"}}>
+      Save
+    </button>
+  </div>
+
 </div>

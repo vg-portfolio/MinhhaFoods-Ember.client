@@ -69,6 +69,34 @@ export default Ember.Route.extend({
         console.log(updatedData);
       });
     },
+    //updateHistory(){}
+    updateHistory(history, whyU){
+      history.save()
+      .then(() =>{
+        console.log("history Success");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+      whyU.save()
+      .then(() =>{
+        console.log("why us Success");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
+
+
+
+
+    //updateWhyU(){}
+
+
+
+
+
+    //updateAwards(){}
   }
 
 });
