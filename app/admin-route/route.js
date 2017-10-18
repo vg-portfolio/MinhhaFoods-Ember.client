@@ -85,18 +85,20 @@ export default Ember.Route.extend({
       .catch((err) => {
         console.log(err);
       });
-    }
+    },
 
+    createAwards(data){
+      let newAward = this.get('store').createRecord('award', data);
+      newAward.save()
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    },
 
-
-
-    //updateWhyU(){}
-
-
-
-
-
-    //updateAwards(){}
+    //updateAwards(){},
   }
 
 });

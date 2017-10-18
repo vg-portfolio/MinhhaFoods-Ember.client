@@ -18,15 +18,38 @@
 
 <div class="row">
   <!--Awards-->
-  <div class="col s12 m12">
+  <div class="center-align">
+    <span class="flow-text">Awards</span>
+    <button type="submit" class="btn btn-primary" {{action "showForm"}}>
+      New
+    </button>
+  </div>
+  <div class="container">
+    {{#if isformShown}}
+    <div class="col s12 m10">
+      <div class="card-panel">
+        <div class="container">
+          <p class="flow-text">New Award</p>
+          <p>Title: {{input value=newAward.title}}</p>
+          <p>Body: {{textarea value=newAward.description row="6"}}</p>
+          <button type="button" name="btn btn-flat" {{action "create" newAward}}>Save</button>
+          <button type="button" name="btn btn-flat" {{action "cancel"}}>Cancel</button>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+
+  </div>
+  {{#unless isformShown}}
+  {{#each awards as |award|}}
+  <div class="col s12 m3 l2">
     <div class="card-panel small">
-      <p><span class="card-title">Awards</span></p>
-      {{#each awards as |award|}}
       <p>Title: {{award.title}}</p>
       <p>Body: {{award.description}}</p>
-      {{/each}}
     </div>
   </div>
+  {{/each}}
+  {{/unless}}
 </div>
 
 <div class="row">
