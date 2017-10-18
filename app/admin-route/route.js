@@ -69,7 +69,7 @@ export default Ember.Route.extend({
         console.log(updatedData);
       });
     },
-    //updateHistory(){}
+
     updateHistory(history, whyU){
       history.save()
       .then(() =>{
@@ -98,7 +98,22 @@ export default Ember.Route.extend({
       });
     },
 
-    //updateAwards(){},
+    updateAward(award){
+      award.save()
+      .then(() =>{
+        console.log("Award update Success");
+      })
+      .catch((err) => {
+        console.log("Award update error");
+        console.log(err);
+      });
+    },
+
+    deleteAward(data){
+      data.destroyRecord();
+      console.log("destroyed");
+    },
+
   }
 
 });

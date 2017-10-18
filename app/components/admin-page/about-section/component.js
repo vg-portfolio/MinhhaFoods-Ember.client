@@ -22,6 +22,11 @@ export default Ember.Component.extend({
       this.set('newAward', {});
       this.set('isformShown', false);
     },
-
+    updateAwards(){
+      this.sendAction('updateAward', this.get('awards'));
+    },
+    deleteAward(data){
+      this.sendAction('delete', data);
+    },
   }
 });

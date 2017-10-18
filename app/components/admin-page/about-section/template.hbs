@@ -1,3 +1,4 @@
+<!--About Section-->
 <div class="card">
   <div class="card-content">
     <div class="container">
@@ -16,8 +17,8 @@
   </div> --}}
 </div>
 
-<div class="row">
   <!--Awards-->
+<div class="row">
   <div class="center-align">
     <span class="flow-text">Awards</span>
     <button type="submit" class="btn btn-primary" {{action "showForm"}}>
@@ -38,20 +39,24 @@
       </div>
     </div>
     {{/if}}
-
   </div>
+
+<!--All award cards-->
   {{#unless isformShown}}
   {{#each awards as |award|}}
   <div class="col s12 m3 l2">
     <div class="card-panel small">
-      <p>Title: {{award.title}}</p>
-      <p>Body: {{award.description}}</p>
+      <a href="#" class="right-align" {{action "deleteAward" award}}>X</a>
+      <p>Title: {{input value=award.title}}</p>
+      <p>Body: {{textarea value=award.description}}</p>
     </div>
   </div>
   {{/each}}
+  <button type="button" name="btn btn-flat" {{action "updateAwards"}}>Save awards</button>
   {{/unless}}
 </div>
 
+<!--History and Why Us card-->
 <div class="row">
   <!--History-->
   <div class="col s12 m6">
