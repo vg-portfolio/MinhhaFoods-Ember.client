@@ -1,1 +1,45 @@
-{{yield}}
+<div class="card">
+  <div class="card-content">
+    <div class="container">
+      <!--About Section-->
+      <p><span class="card-title">About Section</span></p>
+      <p>Section title:{{input value=aboutSection.title}}</p>
+      <p>Section body: {{textarea value=aboutSection.description row="6"}}</p>
+      <button type="submit" class="btn btn-primary" {{action "update"}}>
+        Save
+      </button>
+    </div>
+    <div class="row">
+      <!--History-->
+      <div class="col s12 m4">
+        <div class="card-panel small">
+          <p><span class="card-title">History</span></p>
+          <li>Title: {{history.title}}</li>
+          <li>Body: {{history.description}}</li>
+        </div>
+      </div>
+      <!--About Us-->
+      <div class="col s12 m4">
+        <div class="card-panel small">
+          <p><span class="card-title">History</span></p>
+          <li>Title: {{history.title}}</li>
+          <li>Body: {{history.description}}</li>
+        </div>
+      </div>
+      <!--Awards-->
+      <div class="col s12 m4">
+        <div class="card-panel small">
+          <p><span class="card-title">Awards</span></p>
+          {{#each awards as |award|}}
+          <li>Title: {{award.title}}</li>
+          <li>Body: {{award.description}}</li>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="card-action">
+    <a href="#">This is a link</a>
+  </div>
+</div>

@@ -60,5 +60,15 @@ export default Ember.Route.extend({
     // controller.set('productSection', models.productSection);
     // or, more concisely:
     controller.setProperties(models);
+  },
+
+  actions: {
+    updateAboutSec(data){
+      return data.save()
+      .then((updatedData) => {
+        console.log(updatedData);
+      });
+    },
   }
+
 });
