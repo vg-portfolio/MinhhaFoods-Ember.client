@@ -1,47 +1,76 @@
-<!--About Section-->
-<div class="card">
-  <div class="card-content">
-    <div class="container">
-      <!--About Section-->
-      <p><span class="card-title">About Section</span></p>
-      <p>Section title:{{input value=aboutSection.title}}</p>
-      <p>Section body: {{textarea value=aboutSection.description row="6"}}</p>
+
+<div class="row">
+  <!--Award Section Card-->
+  <div class="col s12 m4">
+    <div class="card-panel small">
+      <span class="flow-text">About Section</span>
       <button type="submit" class="btn btn-primary" {{action "update"}}>
         Save
       </button>
+      <p>Section title:{{input value=aboutSection.title}}</p>
+      <p>Section body: {{textarea value=aboutSection.description row="10"}}</p>
+      <!-- Card actions -->
+      {{!-- <div class="card-action">
+        <a href="#">This is a link</a>
+      </div> --}}
     </div>
   </div>
-  <!-- Card actions -->
-  {{!-- <div class="card-action">
-    <a href="#">This is a link</a>
-  </div> --}}
+
+  <!--History-->
+  <div class="col s12 m4">
+    <div class="card-panel small">
+      <span class="flow-text">History</span>
+      <button type="submit" class="btn btn-primary" {{action "updateHis"}}>
+        Save
+      </button>
+      <p>Header:{{input value=history.title}}</p>
+      <p>Body: {{textarea value=history.description}}</p>
+    </div>
+  </div>
+
+  <!--Why Us-->
+  <div class="col s12 m4">
+    <div class="card-panel small">
+      <span class="flow-text">Why Us</span>
+      <button type="submit" class="btn btn-primary" {{action "updateHis"}}>
+        Save
+      </button>
+      <p>Header: {{input value=whyU.title}}</p>
+      <p>Body: {{textarea value=whyU.description}}</p>
+    </div>
+  </div>
 </div>
 
-  <!--Awards-->
+<!--Award heading row-->
 <div class="row">
-  <div class="center-align">
+  <div class="container center-align">
     <span class="flow-text">Awards</span>
     <button type="submit" class="btn btn-primary" {{action "showForm"}}>
-      New
+      +
     </button>
+    <button type="button" name="btn btn-primary" {{action "updateAwards"}}>Save awards</button>
   </div>
-  <div class="container">
-    {{#if isformShown}}
-    <div class="col s12 m10">
-      <div class="card-panel">
-        <div class="container">
-          <p class="flow-text">New Award</p>
-          <p>Title: {{input value=newAward.title}}</p>
-          <p>Body: {{textarea value=newAward.description row="6"}}</p>
-          <button type="button" name="btn btn-flat" {{action "create" newAward}}>Save</button>
-          <button type="button" name="btn btn-flat" {{action "cancel"}}>Cancel</button>
-        </div>
+</div>
+
+<!--New award form -->
+<div class="row">
+  {{#if isformShown}}
+  <div class="col s12 m8 offset-m2">
+    <div class="card-panel">
+      <div class="container">
+        <p class="flow-text">New Award</p>
+        <p>Title: {{input value=newAward.title}}</p>
+        <p>Body: {{textarea value=newAward.description row="6"}}</p>
+        <button type="button" name="btn btn-flat" {{action "create" newAward}}>Save</button>
+        <button type="button" name="btn btn-flat" {{action "cancel"}}>Cancel</button>
       </div>
     </div>
-    {{/if}}
   </div>
+  {{/if}}
+</div>
 
-<!--All award cards-->
+<!--All awards container-->
+<div class="row">
   {{#unless isformShown}}
   {{#each awards as |award|}}
   <div class="col s12 m3 l2">
@@ -52,33 +81,5 @@
     </div>
   </div>
   {{/each}}
-  <button type="button" name="btn btn-flat" {{action "updateAwards"}}>Save awards</button>
   {{/unless}}
-</div>
-
-<!--History and Why Us card-->
-<div class="row">
-  <!--History-->
-  <div class="col s12 m6">
-    <div class="card-panel small">
-        <p><span class="flow-text">History</span></p>
-        <p>Header:{{input value=history.title}}</p>
-        <p>Body: {{textarea value=history.description}}</p>
-    </div>
-    <button type="submit" class="btn btn-primary" {{action "updateHis"}}>
-      Save
-    </button>
-  </div>
-  <!--Why Us-->
-  <div class="col s12 m6">
-    <div class="card-panel small center-text">
-      <p><span class="flow-text">Why Us</span></p>
-      <p>Header: {{input value=whyU.title}}</p>
-      <p>Body: {{textarea value=whyU.description}}</p>
-    </div>
-    <button type="submit" class="btn btn-primary" {{action "updateHis"}}>
-      Save
-    </button>
-  </div>
-
 </div>
