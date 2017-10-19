@@ -65,8 +65,11 @@ export default Ember.Route.extend({
   actions: {
     updateAboutSec(data){
       return data.save()
-      .then((updatedData) => {
-        console.log(updatedData);
+      .then(() => {
+        console.log("update about section success");
+      })
+      .catch(() => {
+        console.log("update about section failed!");
       });
     },
 
@@ -113,6 +116,59 @@ export default Ember.Route.extend({
       data.destroyRecord();
       console.log("destroyed");
     },
+
+    updateProductSec(data){
+      data.save()
+      .then(() =>{
+        console.log("update product section Success");
+      })
+      .catch((err) => {
+        console.log("update product section Success");
+      });
+    },
+
+    //createProductCat(){},
+
+    //updateProductCat(){},
+
+    //deleteProductCat(){},
+
+    //createProduct(){},
+
+    //updateProduct(){},
+
+    //deleteProduct(){},
+
+
+
+    //updateChefSec(){},
+
+    //createChefCat(){},
+
+    //updateChefCat(){},
+
+    //destroyChefCat(){},
+
+    //createRecipes(){},
+
+    //updateRecipes(){},
+
+    //destroyRecipes(){},
+
+
+    //updateNewsSec(){},
+
+    //createNewsPost(){},
+
+    //updateNewsPost(){},
+
+    //destroyNewsPost(){},
+
+
+    //updateContactSec(){},
+
+    //updateContact(){},
+
 
   }
 
