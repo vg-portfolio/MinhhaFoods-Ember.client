@@ -13,6 +13,7 @@ export default Ember.Route.extend({
     signIn (credentials) {
       return this.get('auth').signIn(credentials)
       .then(() => this.transitionTo('admin-route'))
+      .then(() => console.log('signin in'))
       .then(() => this.get('flashMessages').success('Thanks for signing in!'))
       .catch(() => {
         this.get('flashMessages')
