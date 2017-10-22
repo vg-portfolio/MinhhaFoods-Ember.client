@@ -1,4 +1,5 @@
 <section class="about-us">
+
   <div class="about-container container">
     <span>Welcome to</span>
     <h4 class="section-heading">{{aboutSection.title}}</h4>
@@ -8,9 +9,12 @@
 
   <div class="about-us sub-links">
     <ul>
-      <li><a class="btn" {{action "toggleSubLinks" 'isHistory' 'isWhyUs''isAwards' }}>History</a></li>
+      <li><a href="" class="btn btn-default" {{action "showSelectedContent" aboutSection.history}}>{{aboutSection.history.title}}</a></li>
+      <li><a href="" class="btn btn-default" {{action "showSelectedContent" aboutSection.whyU}}>{{aboutSection.whyU.title}}</a></li>
+      <li><a href="" class="btn btn-default" {{action "showAwards"}}>Awards</a></li>
+      {{!-- <li><a class="btn" {{action "toggleSubLinks" 'isHistory' 'isWhyUs''isAwards' }}>History</a></li>
       <li><a class="btn" {{action "toggleSubLinks" 'isWhyUs' 'isHistory' 'isAwards' }}>About Us</a></li>
-      <li><a class="btn" {{action "toggleSubLinks" 'isAwards' 'isWhyUs' 'isHistory'}}>Awards</a></li>
+      <li><a class="btn" {{action "toggleSubLinks" 'isAwards' 'isWhyUs' 'isHistory'}}>Awards</a></li> --}}
     </ul>
   </div>
 
@@ -35,31 +39,13 @@
   </div>
 
   <div class="sub-link content-container">
-    {{#if isHistory}}
-    <div class="history sub-link">
-      {{!-- <h5>{{history.title}}</h5> --}}
-      <p>{{history.description}}</p>
-    </div>
-    {{/if}}
-
-    {{#if isWhyUs}}
-    <div class="why-us sub-link">
-      {{!-- <h5>{{whyU.title}}</h5> --}}
-      <p>{{whyU.description}}</p>
-    </div>
-    {{/if}}
-
-    {{#if isAwards}}
-    <div class="awards sub-link">
-      {{!-- <h5>Awards</h5> --}}
-      <ul>
-        {{#each awards as |award|}}
-        <li>Title: {{award.title}}</li>
-        <img src="" alt="">
-        <p>{{award.description}}</p>
-        {{/each}}
-      </ul>
-    </div>
+    {{#if awardShowing}}
+      {{#each awards as |s|}}
+      <p>{{s.title}}</p>
+      <p>{{s.description}}</p>
+      {{/each}}
+    {{else}}
+    <p>{{selectedContent.content.data.description}}</p>
     {{/if}}
   </div>
 

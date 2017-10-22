@@ -4,6 +4,7 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   titleVn: DS.attr('string'),
   youtubeLink: DS.attr('string'),
-  dishDate: DS.attr('string'),
-  category: DS.belongsTo('category')
+  details: DS.attr('string'),
+  detailsVn: DS.attr('string'),
+  chefCategory: DS.belongsTo('chefCategory')
 });

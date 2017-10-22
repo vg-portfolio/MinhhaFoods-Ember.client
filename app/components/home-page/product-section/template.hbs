@@ -2,20 +2,30 @@
   <div class="product-section-container">
     <h4>{{productSection.title}}</h4>
     <span>♡</span>
-    <p>{{productSection.description}}</p>
+    <p class="flow-text">{{productSection.description}}</p>
   </div>
 
   <div class="product-section sub-links">
     <ul>
-      {{#each productCat as |cat|}}
-        <li><a class="btn" {{action "showProducts" cat}}>{{cat.catType}}</a></li>
+      <li><a class="btn" {{action "showSelectedContent" null}}>Show All</a></li>
+      {{#each productCategories as |cat|}}
+        <li><a class="btn" {{action "showSelectedContent" cat.catType}}>{{cat.catType}}</a></li>
       {{/each}}
     </ul>
   </div>
 
-
+  <div class="row">
+    {{#each selectedContent as |p|}}
+    <div class="col s12 m3">
+      <div class="card-panel small hoverable">
+        <p>Title: {{p.title}}</p>
+        <p>Description: {{p.description}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
   <!-- Adds flex box here to dynamically populate the the box with products without breaking layout-->
-    {{#each selectedProducts as |product|}}
+    {{!-- {{#each selectedProducts as |product|}}
     {{product.title}}
     <div class="image-row">
       <div class="row">
@@ -41,6 +51,6 @@
         </div>
       </div>
     </div>
-    {{/each}}
+    {{/each}} --}}
 
 </section>

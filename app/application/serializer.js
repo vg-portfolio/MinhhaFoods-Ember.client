@@ -1,4 +1,15 @@
-import { ActiveModelSerializer } from 'active-model-adapter';
+import DS from 'ember-data';
 
-export default ActiveModelSerializer.extend({
+const { underscore } = Ember.String;
+
+export default DS.JSONAPISerializer.extend({
+
+  // keyForAttribute: function(attr) {
+  //   return underscore(attr);
+  // },
+  //
+  // keyForRelationship: function(rawKey) {
+  //   return underscore(rawKey);
+  // }
+
 });
