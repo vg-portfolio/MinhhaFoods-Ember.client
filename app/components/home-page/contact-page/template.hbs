@@ -10,24 +10,24 @@
       <div class="col m2">
         <h6>About Us</h6>
         <ul>
-          <li>{{whyU.title}}</li>
-          <li>{{history.title}}</li>
-          <li>{{awards.title}}</li>
+          <li>{{aboutSection.whyU.title}}</li>
+          <li>{{aboutSection.history.title}}</li>
+          <li>{{aboutSection.awards.title}}</li>
         </ul>
       </div>
       <div class="col m2">
         <h6>Products</h6>
         <ul>
-          {{#each productCat as |cat|}}
-          <li>{{cat.catType}}</li>
+          {{#each products as |p|}}
+          <li>{{p.title}}</li>
           {{/each}}
         </ul>
       </div>
       <div class="col m2">
         <h6>Chef Tips</h6>
         <ul>
-          {{#each chefCat as |cat|}}
-          <li>{{cat.catType}}</li>
+          {{#each dishes as |d|}}
+          <li>{{d.title}}</li>
           {{/each}}
         </ul>
       </div>

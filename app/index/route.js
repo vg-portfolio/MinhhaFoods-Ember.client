@@ -27,12 +27,13 @@ export default Ember.Route.extend({
       chefCategories: this.store.findAll('chef-category'),
 
       dishes: this.store.findAll('dish'),
-    //   newsSection: this.store.findAll('news-section')
-    //   .then((section) => {
-    //     return section.get('firstObject');
-    //   }),
-    //   newsPosts: this.store.findAll('news-post'),
-    //   contact: this.store.findRecord('contact', 1)
+
+      newsSection: this.store.findAll('news-section')
+      .then((section) => {
+        return section.get('firstObject');
+      }),
+      newsPosts: this.store.findAll('news-post'),
+      contact: this.store.findRecord('contact', 1)
     // })
     // .catch((error) => {
     //   console.log(error);
