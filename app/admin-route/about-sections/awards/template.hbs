@@ -1,4 +1,5 @@
-<h3>Awards</h3>
-{{#each model as |m|}}
-<p>{{m.title}}</p>
-{{/each}}
+{{award-form
+  save="newAward"
+  awardFormShown=awardFormShown
+  model=model
+  delete="deleteAward"}}

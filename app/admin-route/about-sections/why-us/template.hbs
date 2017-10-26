@@ -1,4 +1,12 @@
-<h3>Why Us</h3>
-{{#each model as |m|}}
-<p>{{m.title}}</p>
-{{/each}}
+<div class="card-panel large">
+  <p class="flow-text">Additional</p>
+  {{md-input value=model.title label='Section heading' class="col s12 m6"}}
+  {{md-input value=model.titleVn label='Vietnamese section heading' class="col s12 m6"}}
+  <div class="row">
+    {{md-textarea label='Description'
+      value=model.description class="col s12"}}
+      {{md-textarea label='Vietnamese description'
+        value=model.descriptionVn class="col s12"}}
+  </div>
+  <button {{action "saveWhy" model}} type="button" name="button">Save</button>
+</div>
