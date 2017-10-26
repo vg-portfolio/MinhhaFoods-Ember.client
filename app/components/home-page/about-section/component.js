@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   store: Ember.inject.service(),
-
+  language: Ember.inject.service('language-toggle'),
   // isHistory: true,
   // isWhyUs: false,
   // isAwards: false,

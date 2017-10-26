@@ -12,7 +12,6 @@ export default Ember.Route.extend({
 
   actions: {
     saveAbout(m){
-      m.set('title', 'example');
       m.save();
       console.log("save action in route");
       console.log(m);

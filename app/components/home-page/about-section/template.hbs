@@ -2,10 +2,15 @@
 
   <div class="about-container container">
     <span>Welcome to</span>
+    {{#if language.viet}}
+    <h4 class="section-heading">{{aboutSection.titleVn}}</h4>
+    <span>♡</span>
+    <p class="flow-text">{{aboutSection.descriptionVn}}</p>
+    {{else}}
     <h4 class="section-heading">{{aboutSection.title}}</h4>
-    <p>{{history.title}}</p>
     <span>♡</span>
     <p class="flow-text">{{aboutSection.description}}</p>
+    {{/if}}
   </div>
 
   <div class="about-us sub-links">
