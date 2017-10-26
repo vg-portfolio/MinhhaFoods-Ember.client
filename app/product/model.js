@@ -5,5 +5,6 @@ export default DS.Model.extend({
   titleVn: DS.attr('string'),
   volume: DS.attr('string'),
   metric: DS.attr('string'),
-  category: DS.belongsTo('productCategory')
+  productCategoryId: DS.attr('string'),
+  productCategory: DS.belongsTo('productCategory')
 });

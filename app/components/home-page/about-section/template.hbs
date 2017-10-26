@@ -3,18 +3,16 @@
   <div class="about-container container">
     <span>Welcome to</span>
     <h4 class="section-heading">{{aboutSection.title}}</h4>
+    <p>{{history.title}}</p>
     <span>♡</span>
     <p class="flow-text">{{aboutSection.description}}</p>
   </div>
 
   <div class="about-us sub-links">
     <ul>
-      <li><a href="" class="btn btn-default" {{action "showSelectedContent" aboutSection.history}}>{{aboutSection.history.title}}</a></li>
-      <li><a href="" class="btn btn-default" {{action "showSelectedContent" aboutSection.whyU}}>{{aboutSection.whyU.title}}</a></li>
-      <li><a href="" class="btn btn-default" {{action "showAwards"}}>Awards</a></li>
-      {{!-- <li><a class="btn" {{action "toggleSubLinks" 'isHistory' 'isWhyUs''isAwards' }}>History</a></li>
-      <li><a class="btn" {{action "toggleSubLinks" 'isWhyUs' 'isHistory' 'isAwards' }}>About Us</a></li>
-      <li><a class="btn" {{action "toggleSubLinks" 'isAwards' 'isWhyUs' 'isHistory'}}>Awards</a></li> --}}
+      <li><a href="" class="btn btn-default" {{action "showSelectedContent" history}}>{{history.title}}</a></li>
+      <li><a href="" class="btn btn-default" {{action "showSelectedContent" whyU}}>{{whyU.title}}</a></li>
+      <li><a href="" class="btn btn-default" {{action "showAwards" awards}}>Awards</a></li>
     </ul>
   </div>
 
@@ -45,7 +43,7 @@
       <p>{{s.description}}</p>
       {{/each}}
     {{else}}
-    <p>{{selectedContent.content.data.description}}</p>
+    <p>{{selectedContent.description}}</p>
     {{/if}}
   </div>
 

@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   store: Ember.inject.service(),
+
   // isHistory: true,
   // isWhyUs: false,
   // isAwards: false,

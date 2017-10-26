@@ -1,5 +1,9 @@
-
-  {{admin-page/about-section
+<div class="card-panel large">
+  <h2>Admin Dashboard</h2>
+  {{#link-to 'admin-route.about-sections'}}About Section {{/link-to}}
+</div>
+{{outlet}}
+  {{!-- {{admin-page/about-section
     aboutSection=aboutSection
     history=history
     whyU=whyU
@@ -15,4 +19,4 @@
     categories=categories
     products=products
     updateProductSec="updateProductSec" }}
-  </div>
+  </div> --}}

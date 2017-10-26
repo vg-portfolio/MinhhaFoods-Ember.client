@@ -10,7 +10,13 @@ Router.map(function () {
   this.route('sign-up');
   this.route('users');
   this.route('change-password');
-  this.route('admin-route');
+  this.route('admin-route', function() {
+    this.route('about-sections', function() {
+      this.route('history');
+      this.route('why-us');
+      this.route('awards');
+    });
+  });
 });
 
 export default Router;

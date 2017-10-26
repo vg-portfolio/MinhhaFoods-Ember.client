@@ -7,9 +7,9 @@
 
   <div class="product-section sub-links">
     <ul>
-      <li><a class="btn" {{action "showSelectedContent" null}}>Show All</a></li>
+      <li><a class="btn" {{action "showSelectedContent"}}>Show All</a></li>
       {{#each productCategories as |cat|}}
-        <li><a class="btn" {{action "showSelectedContent" cat.catType}}>{{cat.catType}}</a></li>
+        <li><a class="btn" {{action "showSelectedContent" cat}}>{{cat.catType}}</a></li>
       {{/each}}
     </ul>
   </div>

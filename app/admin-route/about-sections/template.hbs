@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col m6">
+    <div class="card-panel large">
+      <div class="row">
+        <div class="col m9">
+          <p class="flow-text">About Section</p>
+          {{!-- {{#each model as |m|}} --}}
+            {{!-- {{input-fields/section-inputs
+              model=m
+              save="saveAbout"}} --}}
+              {{input type="text" value=model.title}}
+              <button {{action "saveAbout" model}} type="button" name="button">Save</button>
+
+          {{!-- {{/each}} --}}
+        </div>
+        <div class="col m3">
+          <ul>
+            <li>{{#link-to 'admin-route.about-sections.history' class="btn"}}History{{/link-to}}</li>
+            <li>{{#link-to 'admin-route.about-sections.why-us' class="btn"}}Why Us{{/link-to}}</li>
+            <li>{{#link-to 'admin-route.about-sections.awards' class="btn"}}Awards{{/link-to}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col m6">
+    {{outlet}}
+  </div>
+
+</div>

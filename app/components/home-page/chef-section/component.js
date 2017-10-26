@@ -1,19 +1,21 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  cat: [],
+  // selectedCat: null,
 
-  selectedCat: null,
-
-  selectedContent: Ember.computed.filter('dishes', function(item) {
-    if (this.get('selectedCat') === null) {
-      return true;
-    }
-    return item.get('chefCategory').content.data.catType === this.get('selectedCat');
-  }).property('selectedCat'),
+  selectedContent: Ember.computed.filter('cat', function(item) {
+    // if (this.get('selectedCat') === null) {
+    //   return true;
+    // }
+    console.log(item);
+    return item;
+  }).property('cat'),
 
     actions: {
       showSelectedContent(category){
-        this.set('selectedCat', category);
+        let dishes = category.get('dishes');
+        this.set('cat', dishes);
       }//showProducts
     }
 });

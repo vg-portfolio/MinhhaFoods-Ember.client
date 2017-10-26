@@ -8,12 +8,17 @@ export default Ember.Component.extend({
     if (this.get('selectedCat') === null) {
       return true;
     }
-    return item.get('category').content.data.catType === this.get('selectedCat');
+    // console.log(item.data.productCategoryId);
+    return item.data.productCategoryId === this.get('selectedCat');
   }).property('selectedCat'),
 
   actions: {
     showSelectedContent(category){
-      this.set('selectedCat', category);
+      if (category) {
+        this.set('selectedCat', category.id);
+      } else {
+        this.set('selectedCat', null);
+      }
     }//showProducts
   }
 });

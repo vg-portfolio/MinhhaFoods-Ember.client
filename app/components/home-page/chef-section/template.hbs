@@ -8,7 +8,7 @@
 
   <div class="image-row row">
     {{#each chefCategories as |cat|}}
-    <a {{action "showSelectedContent" cat.catType}}>
+    <a {{action "showSelectedContent" cat}}>
       <div class="col s12 m4">
         <div class="card hoverable chef-image-wrapper valign-wrapper">
           <img src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt="">
@@ -24,6 +24,7 @@
     <div class="col s12 m3">
       <div class="card-panel small hoverable">
         <p>Title: {{p.title}}</p>
+        <p>{{p.description}}</p>
       </div>
     </div>
     {{/each}}

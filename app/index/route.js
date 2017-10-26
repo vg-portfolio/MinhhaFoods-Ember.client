@@ -8,6 +8,16 @@ export default Ember.Route.extend({
         return about.get('firstObject');
       }),
 
+      history: this.store.findAll('history')
+      .then((history) => {
+        return history.get('firstObject');
+      }),
+
+      whyU: this.store.findAll('why-u')
+      .then((why) => {
+        return why.get('firstObject');
+      }),
+
       awards: this.store.findAll('award'),
 
       productSection: this.store.findAll('product-section')
@@ -26,7 +36,7 @@ export default Ember.Route.extend({
 
       chefCategories: this.store.findAll('chef-category'),
 
-      dishes: this.store.findAll('dish'),
+      // dishes: this.store.findAll('dish'),
 
       newsSection: this.store.findAll('news-section')
       .then((section) => {
