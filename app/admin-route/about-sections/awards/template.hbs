@@ -1,5 +1,22 @@
-{{award-form
+{{!-- {{input-form
   save="newAward"
-  awardFormShown=awardFormShown
+  isFormShown=isFormShown
   model=model
-  delete="deleteAward"}}
+  delete="deleteAward"
+  update="saveAward"
+  cardTitle="Awards"
+
+  title="Award title"
+  titleVn="Award title VN"
+  description="Description"
+  descriptionVn="Description VN"}} --}}
+
+  {{input-form
+    whichForm="awardForm"
+    model=model
+    delete="deleteAward"
+    update="updateAward"
+    save="newAward"
+
+    cardTitle="Awards"
+    newButton="Create Award" }}

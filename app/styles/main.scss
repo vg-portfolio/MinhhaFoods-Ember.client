@@ -5,9 +5,9 @@ body {
 nav {
   position: absolute;
   #navbar {
-    position: relative;
+    // position: relative;
     background: rgba(255,255,255,0);
-    z-index: 99;
+    z-index: 2;
   }
   img {
     min-width: 25%;
@@ -125,8 +125,6 @@ section {
 
 
 //CONTACT SECTION
-
-
 
 @media query {
 

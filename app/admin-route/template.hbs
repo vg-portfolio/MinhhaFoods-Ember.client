@@ -1,7 +1,11 @@
 <div class="card-panel large">
   <h2>Admin Dashboard</h2>
-  {{#link-to 'admin-route.about-sections'}}About Section {{/link-to}}
+  <ul>
+    <li>{{#link-to 'admin-route.about-sections'}}About Section {{/link-to}}</li>
+    <li>{{#link-to 'admin-route.product-sections'}}Product Section {{/link-to}}</li>
+  </ul>
 </div>
+
 {{outlet}}
   {{!-- {{admin-page/about-section
     aboutSection=aboutSection

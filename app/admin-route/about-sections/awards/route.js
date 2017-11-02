@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    saveAward(award){
+    updateAward(award){
       return award.save()
       .then(() => {
         console.log("award saved!");
@@ -24,10 +24,7 @@ export default Ember.Route.extend({
     deleteAward(data){
       return data.destroyRecord()
       .then(() => {
-        console.log("delete success");
-      })
-      .then(() => {
-        this.store.reloadAll();
+        console.log("reloaded");
       });
     }
 

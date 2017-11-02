@@ -1,0 +1,36 @@
+
+<div class="row">
+  <div class="col s6">
+    <div class="card-panel small">
+      <div class="row">
+        <div class="col s6">
+          <p class="flow-text">Product Categories</p>
+        </div>
+        <div class="col s6">
+          {{#if formShown}}
+          <button class="btn btn-primary disabled" type="button" name="button" {{action "addNew"}}>Create product</button>
+          <button class="btn btn-primary red" type="button" name="button" {{action "closeForm"}}>X</button>
+          {{else}}
+          <button class="btn btn-primary" type="button" name="button" {{action "addNew"}}>Create product</button>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  {{#each model as |model|}}
+  <div class="col s12 m3">
+    <div class="card-panel large">
+      <div class="row">
+        {{md-input value=model.catType label='Category' class="col s12"}}
+        {{md-input value=model.catTypeVn label='Category VN' class="col s12"}}
+      </div>
+      <button {{action "save" model}} type="button" name="button" class="btn teal">Save</button>
+      <button {{action "delete" model}} type="button" name="button" class="btn red">X</button>
+    </div>
+  </div>
+  {{/each}}
+</div>

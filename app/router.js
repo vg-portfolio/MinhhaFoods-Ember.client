@@ -16,6 +16,9 @@ Router.map(function () {
       this.route('why-us');
       this.route('awards');
     });
+    this.route('product-sections', function() {
+      this.route('categories');
+    });
   });
 });
 
