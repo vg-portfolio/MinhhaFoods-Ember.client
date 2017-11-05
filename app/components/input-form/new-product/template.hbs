@@ -1,0 +1,26 @@
+<p class="flow-text">{{cardFormName}}</p>
+<div class="row ">
+  {{md-input value=newObject.title label="Product name" class="col s12 m6"}}
+  {{md-input value=newObject.titleVn label="Product name VN" class="col s12 m6"}}
+</div>
+<div class="row">
+  {{md-input value=newObject.volume label="Volume" class="col s6"}}
+  {{md-input value=newObject.metric label="Volume VN" class="col s6"}}
+  {{!-- {{md-input value=newObject.productCategoryId label="Category ID" class="col s6"}} --}}
+</div>
+
+{{#power-select
+  selected=category
+  options=categories
+  searchField="catType"
+  onchange=(action "chooseCategory")
+  as |category| }}
+  {{category.catType}}
+{{/power-select}}
+
+<div class="row">
+  {{md-textarea label="Description"
+    value=description class="col s12"}}
+  {{md-textarea label="Description VN"
+    value=descriptionVn class="col s12"}}
+</div>

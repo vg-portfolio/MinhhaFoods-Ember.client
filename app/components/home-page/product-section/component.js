@@ -8,8 +8,7 @@ export default Ember.Component.extend({
     if (this.get('selectedCat') === null) {
       return true;
     }
-    // console.log(item.data.productCategoryId);
-    return item.data.productCategoryId === this.get('selectedCat');
+    return item.get('productCategory.id') === this.get('selectedCat');
   }).property('selectedCat'),
 
   actions: {

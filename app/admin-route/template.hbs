@@ -1,26 +1,7 @@
 <div class="card-panel large">
   <h2>Admin Dashboard</h2>
-  <ul>
-    <li>{{#link-to 'admin-route.about-sections'}}About Section {{/link-to}}</li>
-    <li>{{#link-to 'admin-route.product-sections'}}Product Section {{/link-to}}</li>
-  </ul>
+  <li>{{#link-to 'admin-route.about-sections'}}About Section {{/link-to}}</li>
+  <li>{{#link-to 'admin-route.product-sections'}}Product Section {{/link-to}}</li>
 </div>
 
 {{outlet}}
-  {{!-- {{admin-page/about-section
-    aboutSection=aboutSection
-    history=history
-    whyU=whyU
-    awards=awards
-    update="updateAboutSec"
-    updateHisWhy="updateHistory"
-    create="createAwards"
-    updateAward="updateAward"
-    delete="deleteAward"}}
-<div>
-  {{admin-page/product-section
-    productSection=productSection
-    categories=categories
-    products=products
-    updateProductSec="updateProductSec" }}
-  </div> --}}

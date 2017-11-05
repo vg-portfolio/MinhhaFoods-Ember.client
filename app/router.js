@@ -17,9 +17,16 @@ Router.map(function () {
       this.route('awards');
     });
     this.route('product-sections', function() {
-      this.route('categories');
+      this.route('categories', function() {});
+      this.route('products');
+
+      this.route('category', { path: '/category/:product-category_id' }, function() {
+        this.route('products');
+      });
     });
   });
+
+  this.route('product-sections', function() {});
 });
 
 export default Router;

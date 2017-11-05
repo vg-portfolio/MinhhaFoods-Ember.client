@@ -6,7 +6,6 @@ export default Ember.Component.extend({
   isFormShown: false,
   isAwardFormShown: false,
   // showForm: null,
-
   actions: {
     save(){
       this.sendAction('save', this.get('newObject'));
@@ -14,10 +13,10 @@ export default Ember.Component.extend({
       this.set('isFormShown', false);
     },
     update(data){
-      this.sendAction('update', data)
+      // console.log(data);
+      this.sendAction('update', data);
     },
     new(){
-      let whichForm = this.get('whichForm');
       this.set('isFormShown', true);
       // this.set('showForm', whichForm);
     },

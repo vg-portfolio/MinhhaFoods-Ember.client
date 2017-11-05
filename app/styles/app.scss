@@ -1,6 +1,6 @@
 // Fix for Roboto font path
 $roboto-font-path: '../assets/';
-
+@import "ember-power-select";
 @import "components/color";
 $primary-color: #ffffff !default;
 $primary-color-light: lighten($primary-color, 15%);
