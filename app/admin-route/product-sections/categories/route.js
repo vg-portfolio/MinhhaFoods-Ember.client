@@ -9,14 +9,20 @@ export default Ember.Route.extend({
     updateCat(data){
       return data.save()
       .then(() => {
-        console.log("update product category success");
+        return Materialize.toast('Update success', 4000, 'teal');
+      })
+      .catch(() => {
+        return Materialize.toast('Error', 4000, 'red');
       });
     },
     newCat(data){
       let newCat = this.store.createRecord('productCategory', data);
       return newCat.save()
       .then(() => {
-        console.log("New product category success");
+        return Materialize.toast('Update success', 4000, 'teal');
+      })
+      .catch(() => {
+        return Materialize.toast('Error', 4000, 'red');
       });
     },
 
@@ -26,7 +32,10 @@ export default Ember.Route.extend({
         this.store.reloadAll();
       })
       .then(() => {
-        console.log("delete success");
+        return Materialize.toast('Update success', 4000, 'teal');
+      })
+      .catch(() => {
+        return Materialize.toast('Error', 4000, 'red');
       });
     },
 

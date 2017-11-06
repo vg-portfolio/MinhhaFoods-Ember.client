@@ -18,13 +18,18 @@ export default Ember.Route.extend({
       return data.destroyRecord()
       .then(() => {
         return this.store.reloadAll();
-        console.log("destroyed");
+      })
+      .then(() => {
+        return Materialize.toast('Update success', 4000, 'teal');
       });
     },
     updatePro(data){
       return data.save()
       .then(() => {
-        console.log("update success");
+        return Materialize.toast('Update success', 4000, 'teal');
+      })
+      .catch(() => {
+        return Materialize.toast('Error', 4000, 'red');
       });
     },
     newPro(data){
@@ -36,9 +41,11 @@ export default Ember.Route.extend({
       // .then((category) => {
       //   return newPro.set('productCategory', category)
       // })
-      .then((cate) => {
-        // return cate.save();
-        console.log("create success");
+      .then(() => {
+        return Materialize.toast('Update success', 4000, 'teal');
+      })
+      .catch(() => {
+        return Materialize.toast('Error', 4000, 'red');
       });
     },
   }

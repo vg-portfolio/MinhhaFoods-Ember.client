@@ -9,7 +9,10 @@ export default Ember.Route.extend({
     updateAward(award){
       return award.save()
       .then(() => {
-        console.log("award saved!");
+        return Materialize.toast('Update success', 4000, 'teal');
+      })
+      .catch(() => {
+        return Materialize.toast('Error', 4000, 'red');
       });
     },
 
@@ -17,14 +20,20 @@ export default Ember.Route.extend({
       let newAward = this.store.createRecord('award', data);
       return newAward.save()
       .then(() => {
-        console.log("New award saved!");
+        return Materialize.toast('New award saved!', 4000, 'teal');
+      })
+      .catch(() => {
+        return Materialize.toast('Error', 4000, 'red');
       });
     },
 
     deleteAward(data){
       return data.destroyRecord()
       .then(() => {
-        console.log("reloaded");
+        return Materialize.toast('Delete success', 4000, 'teal');
+      })
+      .then(() => {
+        this.get('store').reloadAll();
       });
     }
 

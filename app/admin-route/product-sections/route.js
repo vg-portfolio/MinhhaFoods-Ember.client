@@ -12,7 +12,10 @@ export default Ember.Route.extend({
     saveProSection(model){
       return model.save()
       .then(() => {
-        console.log("update product section success");
+        return Materialize.toast('Update success', 4000, 'teal');
+      })
+      .catch(() => {
+        return Materialize.toast('Error', 4000, 'red');
       });
     },
 

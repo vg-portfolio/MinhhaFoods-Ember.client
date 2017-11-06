@@ -9,6 +9,10 @@ export default Ember.Component.extend({
   awardShowing: false,
   selectedContent: [],
 
+  ready: function(){
+    Ember.$('.carousel').carousel();
+  }.on('didInsertElement'),
+
   actions: {
     showSelectedContent: function(selection){
       this.set('awardShowing', false);

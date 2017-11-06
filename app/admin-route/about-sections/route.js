@@ -12,9 +12,13 @@ export default Ember.Route.extend({
 
   actions: {
     saveAbout(m){
-      m.save();
-      console.log("save action in route");
-      console.log(m);
+      return m.save()
+      .then(() => {
+        Materialize.toast('Update success', 4000, 'teal');
+      })
+      .catch(() => {
+        Materialize.toast('Error', 4000, 'red');
+      });
       // newAbout.save()
       // .then(() => {
       //   return console.log("save success");
