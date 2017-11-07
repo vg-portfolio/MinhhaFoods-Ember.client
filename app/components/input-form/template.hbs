@@ -69,6 +69,17 @@
           <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
       {{/if}}
       <!--/.dish form-->
+
+      <!--new post form-->
+      {{#if (eq whichForm "postForm")}}
+        {{input-form/new-post
+          cardFormName="Add a new post"
+          newObject=newObject
+          model=model}}
+
+          <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
+      {{/if}}
+      <!--/.new post form-->
     </div> <!--new-form container-->
 {{/if}}
 
@@ -285,3 +296,27 @@
 </div>
 {{/if}}
 <!--/.chef cards-->
+
+<!--Post cards-->
+{{#if (eq whichForm "postForm")}}
+<div class="row">
+  {{#each model as |model|}}
+  <div class="col s12 m4">
+    <div class="card-panel small">
+      <div class="row">
+        {{md-input value=model.title label="News title" class="col s12 m6"}}
+        {{md-input value=model.titleVn label="News VN" class="col s12 m6"}}
+      </div>
+      <div class="row">
+        {{md-input value=model.description label="Body" class="col s12"}}
+        {{md-input value=model.descriptionVn label="Body VN" class="col s12"}}
+      </div>
+
+      {{!-- <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button> --}}
+      <button {{action "delete" model}} type="button" name="button" class="btn red">X</button>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
+<!--/.news post cards-->

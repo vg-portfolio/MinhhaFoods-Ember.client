@@ -28,6 +28,10 @@ Router.map(function () {
       this.route('categories');
       this.route('dishes');
     });
+    this.route('news-section', function() {
+      this.route('post');
+    });
+    this.route('contact');
   });
 
   this.route('product-sections', function() {});
