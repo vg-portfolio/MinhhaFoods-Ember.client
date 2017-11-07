@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card-panel large">
+      <p class="flow-text">Chef Section</p>
+          {{md-input value=model.title label='Section heading' class="col s12 m6"}}
+          {{md-input value=model.titleVn label='Vietnamese section heading' class="col s12 m6"}}
+          <div class="row">
+            {{md-textarea label='Description'
+              value=model.description class="col s12"}}
+              {{md-textarea label='Vietnamese description'
+                value=model.descriptionVn class="col s12"}}
+          </div>
+          <button {{action "saveSection" model}} type="button" name="button">Save</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+      <ul>
+        <li>{{#link-to 'admin-route.chef-section.categories' class="btn"}}Categories{{/link-to}}</li>
+        <li>{{#link-to 'admin-route.chef-section.dishes' class="btn"}}Dishes{{/link-to}}</li>
+      </ul>
+    </div>
+  </div>
+
+{{outlet}}
+
+
+
+</div>

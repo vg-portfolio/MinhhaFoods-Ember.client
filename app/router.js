@@ -10,6 +10,7 @@ Router.map(function () {
   this.route('sign-up');
   this.route('users');
   this.route('change-password');
+
   this.route('admin-route', function() {
     this.route('about-sections', function() {
       this.route('history');
@@ -19,10 +20,13 @@ Router.map(function () {
     this.route('product-sections', function() {
       this.route('categories', function() {});
       this.route('products');
-
-      this.route('category', { path: '/category/:product-category_id' }, function() {
-        this.route('products');
-      });
+      // this.route('category', { path: '/category/:product-category_id' }, function() {
+      //   this.route('products');
+      // });
+    });
+    this.route('chef-section', function() {
+      this.route('categories');
+      this.route('dishes');
     });
   });
 
