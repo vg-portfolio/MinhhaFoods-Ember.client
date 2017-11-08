@@ -1,1 +1,36 @@
-{{outlet}}
+<div class="row">
+  <div class="col s12">
+    <div class="card-panel large">
+      <p class="flow-text">Contact Section</p>
+          {{md-input value=model.title label='Section heading' class="col s12 m6"}}
+          {{md-input value=model.titleVn label='Vietnamese section heading' class="col s12 m6"}}
+          <div class="row">
+            {{md-textarea label='Description'
+              value=model.description class="col s12"}}
+              {{md-textarea label='Vietnamese description'
+                value=model.descriptionVn class="col s12"}}
+          </div>
+          <div class="row">
+            {{md-textarea label='Company Name'
+              value=model.companyName class="col s12"}}
+              {{md-textarea label='Company Vn'
+                value=model.companyNameVn class="col s12"}}
+          </div>
+          <div class="row">
+            {{md-textarea label='Tel'
+              value=model.tel class="col s6"}}
+            {{md-textarea label='Fax'
+              value=model.fax class="col s6"}}
+            {{md-textarea label='hotline'
+              value=model.hotline class="col s6"}}
+            {{md-textarea label='Address'
+              value=model.address class="col s6"}}
+            {{md-textarea label='Facebook link'
+              value=model.fbLink class="col s12"}}
+          </div>
+          <button {{action "save" model}} type="button" name="button">Save</button>
+    </div>
+  </div>
+
+
+</div>
