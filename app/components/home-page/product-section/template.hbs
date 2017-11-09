@@ -5,19 +5,19 @@
     <p class="flow-text">{{productSection.description}}</p>
   </div>
 
-  <div class="product-section sub-links">
+  <div class="product-section link-button">
     <ul>
-      <li><a class="btn" {{action "showSelectedContent"}}>Show All</a></li>
+      <li><a class="btn" {{action "showSelectedContent"}}>All</a></li>
       {{#each productCategories as |cat|}}
         <li><a class="btn" {{action "showSelectedContent" cat}}>{{cat.catType}}</a></li>
       {{/each}}
     </ul>
   </div>
 
-  <div class="row">
+  <div class="row center-align">
     {{#each selectedContent as |p|}}
-    <div class="col s12 m3">
-      <div class="card-panel small hoverable">
+    <div class="col s12 m4">
+      <div class="card-panel small hoverable" {{action "showModal"}}>
         <p>Title: {{p.title}}</p>
         <p>Description: {{p.description}}</p>
       </div>
@@ -54,3 +54,23 @@
     {{/each}} --}}
 
 </section>
+
+
+{{#if modalIsOpen}}
+    {{#md-modal close='closeModal' class="test-modal"}}
+        <div class="modal-content">
+            <h4>Ohai there!</h4>
+            <p>Star ember-cli-materialize if you love it on
+            <a href="https://github.com/truenorth/ember-cli-materialize">github</a>!
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
+                Done!
+            </a>
+            <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
+                Cancel
+            </a>
+        </div>
+    {{/md-modal}}
+{{/if}}

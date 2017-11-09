@@ -5,6 +5,8 @@ $roboto-font-path: '../assets/';
 $primary-color: #ffffff !default;
 $primary-color-light: lighten($primary-color, 15%);
 $primary-color-dark: darken($primary-color, 15%);
+$theme-color: rgb(208, 236, 160);
+$theme-color-dark: darken($theme-color, 40%);
 
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
