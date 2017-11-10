@@ -9,9 +9,9 @@ export default Ember.Component.extend({
   awardShowing: false,
   selectedContent: [],
 
-  ready: function(){
-    Ember.$('.carousel').carousel();
-  }.on('didInsertElement'),
+  // ready: function(){
+  //   Ember.$('.carousel').carousel();
+  // }.on('didInsertElement'),
 
   actions: {
     showSelectedContent: function(selection){
@@ -20,12 +20,11 @@ export default Ember.Component.extend({
     },
     showAwards(){
       this.set('awardShowing', true);
+      Ember.$('body').css('overflow-y', 'hidden');
+    },
+    closeModal(){
+      this.set('awardShowing', false);
+      Ember.$('body').css('overflow-y', 'scroll');
     }
-    // toggleSubLinks: function(subLink, subLink2, subLink3){
-    //   this.set(subLink2, false);
-    //   this.set(subLink3, false);
-    //   this.set(subLink, true);
-    //   console.log(subLink);
-    // },
   }
 });

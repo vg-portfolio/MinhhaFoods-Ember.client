@@ -60,14 +60,27 @@
   </div>
 
 
-  <div class="sub-link content-container">
+  <div class="">
     {{#if awardShowing}}
-      {{#each awards as |s|}}
-      <p>{{s.title}}</p>
-      <p>{{s.description}}</p>
-      {{/each}}
+    {{#md-modal close='closeModal' class="test-modal"}}
+      <div class="modal-content center-align">
+        <h4 class="flow-text">Awards</h4>
+        <div class="row">
+          {{#each awards as |s|}}
+            <div class="col s6 m4">
+              <div class="card">
+                <div class="card-content">
+                  <p class="card-title">{{s.title}}</p>
+                  <p>{{s.description}}</p>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/md-modal}}
     {{else}}
-    <p>{{selectedContent.description}}</p>
+      <p>{{selectedContent.description}}</p>
     {{/if}}
   </div>
 

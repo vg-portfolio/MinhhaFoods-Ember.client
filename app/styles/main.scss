@@ -104,6 +104,16 @@ section {
   }
 }
 
+.awards-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  .card-panel {
+  }
+}
+
 //PRODUCT SECTION
 .our-products {
   padding-top: 3rem;
