@@ -60,6 +60,10 @@ section {
   // margin-bottom: -11em;
 }
 
+.image-thumb {
+  height: auto;
+  width: 100%;
+}
 .section-heading {
   margin-top: 0.3rem;
 }
@@ -114,6 +118,45 @@ section {
     float: left;
   }
 }
+
+.product-image-row {
+   display: flex;
+   flex-wrap: nowrap;
+   overflow-x: scroll;
+   justify-content: flex-start;
+   -webkit-overflow-scrolling: touch;
+   -ms-overflow-style: -ms-autohiding-scrollbar;
+ }
+
+ .product-card  {
+   // flex: 0 0 auto;
+   margin: 0 !important;
+   .product-image {
+     // position: relative;
+     height: 18rem;
+     // .hover-info{
+     //   display: block;
+     //   position: absolute;
+     //   z-index: 99;
+     //   margin: 0 auto;
+     //   text-align: center;
+     //   font-weight: bold;
+     //   color: white;
+     // }
+     // &:hover {
+     //   .hover-info{
+     //     display: block;
+     // }
+     // }
+   }
+ }
+
+.modal-content {
+  .card-panel {
+    background-color: $theme-color;
+  }
+}
+
 
 //CHEF SECTION
 .chef-section {

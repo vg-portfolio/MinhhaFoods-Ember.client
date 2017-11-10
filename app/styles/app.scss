@@ -13,5 +13,6 @@ $error-color: color("red", "base") !default;
 
 // Materialize styles
 @import "materialize";
+@import 'ember-cli-materialize';
 @import "main";
 @import "colors";

@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   selectedCat: null,
 
   modalIsOpen: false,
+  displayedObject: {},
 
   selectedContent: Ember.computed.filter('products', function(item) {
     if (this.get('selectedCat') === null) {
@@ -21,8 +22,9 @@ export default Ember.Component.extend({
         this.set('selectedCat', null);
       }
     },//showProducts
-    showModal(){
+    showModal(object){
       this.set('modalIsOpen', true);
+      this.set('displayedObject', object)
       Ember.$('body').css('overflow-y', 'hidden');
       console.log(this.get('modalIsOpen'));
     },
