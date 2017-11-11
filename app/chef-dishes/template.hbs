@@ -1,0 +1,19 @@
+{{!-- <div id="dish-banner">
+  <img src="https://i.imgur.com/pnIcY0O.png" alt="">
+</div> --}}
+<section class="chef-dishes container center-align">
+  <h4 class="section-heading">
+    {{model.catType}}
+  </h4>
+  <p class="flow-text">{{model.description}}</p>
+
+  <div class="row">
+    {{#each model.dishes as |d|}}
+    <div class="col s12 m4">
+      <img class="image-thumb" src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt="">
+
+      <div class="card-panel center-align flow-text">{{d.title}}</div>
+    </div>
+    {{/each}}
+  </div>
+</section>

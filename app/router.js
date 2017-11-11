@@ -33,8 +33,7 @@ Router.map(function () {
     });
     this.route('contact');
   });
-
-  this.route('product-sections', function() {});
+  this.route('chef-dishes', { path: '/chef-dishes/:chef-category_id'});
 });
 
 export default Router;

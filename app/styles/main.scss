@@ -8,8 +8,9 @@ li{
 
 nav {
   position: absolute;
+  background-color: $theme-color;
   #navbar {
-    // position: relative;
+    position: relative;
     background: rgba(255,255,255,0);
     z-index: 2;
   }
@@ -170,6 +171,9 @@ section {
 
 //CHEF SECTION
 .chef-section {
+  .section-heading {
+    margin-top: 5rem;
+  }
   // position: relative;
   .chef-image-wrapper {
     display: inline-block;
@@ -192,6 +196,14 @@ section {
   }
 }
 
+//CHEF dish
+.chef-dishes{
+  .section-heading {
+    margin-top: 5rem;
+  }
+}
+
+
 //NEWS SECTION
 .news-posts-container {
   margin-top: 2rem;
@@ -199,6 +211,16 @@ section {
 
 
 //CONTACT SECTION
+
+
+//ADMIN dashboard
+.admin-dashboard {
+  background-color: $theme-color;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-top: 10rem;
+}
 
 @media query {
 
