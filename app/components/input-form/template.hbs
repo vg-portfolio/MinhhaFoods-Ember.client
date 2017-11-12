@@ -48,10 +48,8 @@
 <!--Dish form-->
     {{#if (eq whichForm "dishForm")}}
       {{input-form/new-dish
-        cardFormName="Add a new dish"
         newObject=newObject
         categories=categories}}
-
         <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
     {{/if}}
 <!--/.dish form-->
@@ -190,9 +188,9 @@
       </div>
       <div class="">
         {{md-input value=model.youtubeLink label="Video" class="col s12"}}
+        {{md-input value=model.imageUrl label="Image Url" class="col s12"}}
         <p>Category: {{model.chefCategory.catType}}</p>
       </div>
-
       <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button>
       <button {{action "delete" model}} type="button" name="button" class="btn red">X</button>
     </div>

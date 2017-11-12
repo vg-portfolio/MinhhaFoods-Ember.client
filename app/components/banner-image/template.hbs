@@ -1,0 +1,18 @@
+{{#if (eq bannerType "main")}}
+<div id="banner-image">
+  <img src="https://i.imgur.com/pnIcY0O.png" alt="">
+  <div class="banner-container">
+    <button class="btn main-scroll" type="button" name="button" {{action "scrollTo" "#contact-section"}}>V</button>
+  </div>
+</div>
+{{/if}}
+
+{{#if (eq bannerType "dish")}}
+<div id="banner-image">
+  <img src="{{model.imageUrl}}" alt="">
+  <div class="banner-container">
+    <p>{{model.catType}}</p>
+    <p>{{model.description}}</p>
+  </div>
+</div>
+{{/if}}

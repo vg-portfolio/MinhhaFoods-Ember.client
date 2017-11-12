@@ -6,6 +6,7 @@ export default DS.Model.extend({
   youtubeLink: DS.attr('string'),
   details: DS.attr('string'),
   detailsVn: DS.attr('string'),
+  imageUrl: DS.attr('string'),
   // chefCategoryId: DS.attr('string'),
   chefCategory: DS.belongsTo('chefCategory')
 });
