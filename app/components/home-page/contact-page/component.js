@@ -1,6 +1,17 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  actions: {
+    scrollTo(section){
+      let target = Ember.$(section);
+      console.log(target);
+      event.preventDefault();
+      Ember.$('html, body').stop().animate({
+          scrollTop: target.offset().top
+      }, 1000);
+      console.log("done");
+    }
+  }
   // chefCat: [],
   // productCat: [],
   //

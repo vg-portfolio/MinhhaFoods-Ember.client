@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  auth: Ember.inject.service(),
+  
   model() {
     return Ember.RSVP.hash({
       aboutSection: this.store.findAll('about-section')
@@ -59,5 +61,20 @@ export default Ember.Route.extend({
     // or, more concisely:
     controller.setProperties(models);
   },
+
+  actions: {
+    signOut () {
+      this.get('auth').signOut()
+        // .then(() => this.get('store').unloadAll())
+        .then(() => this.transitionTo('application'))
+        .then(() => {
+          this.get('flashMessages').warning('You have been signed out.');
+        })
+        .catch(() => {
+          this.get('flashMessages')
+          .danger('There was a problem. Are you sure you\'re signed-in?');
+        });
+    },
+  }
 
 });
