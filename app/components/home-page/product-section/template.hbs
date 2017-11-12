@@ -14,23 +14,11 @@
     </ul>
   </div>
 
-
-  {{!-- <div class="row center-align">
-    {{#each selectedContent as |p|}}
-    <div class="col s12 m4">
-      <div class="card-panel small hoverable" {{action "showModal" p}}>
-        <p>Title: {{p.title}}</p>
-        <p>Description: {{p.description}}</p>
-      </div>
-    </div>
-    {{/each}}
-  </div> --}}
-
   <div class="product-image-row row center-align">
     {{#each selectedContent as |pro|}}
 
       <div class="product-card col s12 m4" {{action "showModal" pro}}>
-        <img class="card product-image hoverable valign-wrapper" src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt="">
+        <img class="card product-image hoverable valign-wrapper" src="{{pro.imageUrl}}" alt="">
         <div class="hover-info">
           <p class="center-align flow-text">{{pro.title}}</p>
         </div>
@@ -46,7 +34,7 @@
             <div class="col s12 m6">
               <div class="row">
                 <div class="s12">
-                  <img class="image-thumb" src="https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178" alt="">
+                  <img class="image-thumb" src="{{displayedObject.imageUrl}}" alt="">
                 </div>
                 <div class="col s12">
                   <div class="card-panel center-align flow-text">{{displayedObject.title}}</div>

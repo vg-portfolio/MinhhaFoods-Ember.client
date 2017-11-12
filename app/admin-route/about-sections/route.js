@@ -12,6 +12,8 @@ export default Ember.Route.extend({
 
   actions: {
     saveAbout(m){
+      console.log("Yo");
+      console.log(m);
       return m.save()
       .then(() => {
         Materialize.toast('Update success', 4000, 'teal');

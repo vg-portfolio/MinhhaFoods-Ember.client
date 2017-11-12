@@ -1,4 +1,4 @@
-<p class="flow-text">{{cardFormName}}</p>
+<p class="flow-text">New Product</p>
 <div class="row ">
   {{md-input value=newObject.title label="Product name" class="col s12 m6"}}
   {{md-input value=newObject.titleVn label="Product name VN" class="col s12 m6"}}
@@ -20,7 +20,11 @@
 
 <div class="row">
   {{md-textarea label="Description"
-    value=description class="col s12"}}
+    value=newObjectdescription class="col s12"}}
   {{md-textarea label="Description VN"
-    value=descriptionVn class="col s12"}}
+    value=newObjectdescriptionVn class="col s12"}}
+</div>
+
+<div class="row">
+  {{md-input value=newObject.imageUrl label="Image Url" class="col s12"}}
 </div>

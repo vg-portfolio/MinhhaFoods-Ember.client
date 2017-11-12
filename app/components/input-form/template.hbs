@@ -11,181 +11,89 @@
 <!--Form to add new stuff-->
 {{#if isFormShown}}
 <div class="new-form container">
+
 <!--Product category form-->
   {{#if (eq whichForm "catForm")}}
-    {{input-form/new-card
-      cardFormName="Add a new category"
-      title=newObject.catType
-      titleVn=newObject.catTypeVn
-      description=newObject.description
-      descriptionVn=newObject.descriptionVn
-
-      newCardTitle="Category title"
-      newCardTitleVn="Category title VN"
-      newDescription="Description"
-      newDescriptionVn="Description VN"}}
+    {{input-form/new-product-category newObject=newObject}}
       <div class="row">
         <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
       </div>
     {{/if}}
 
+<!--Chef-category form-->
+  {{#if (eq whichForm "chefCatForm")}}
+    {{input-form/new-chef-category newObject=newObject}}
+      <div class="row">
+        <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
+      </div>
+    {{/if}}
 
-      <!--About section Award form-->
-      {{#if (eq whichForm "awardForm")}}
-            {{input-form/new-card
-              cardFormName="Add a new award"
-              title=newObject.title
-              titleVn=newObject.titleVn
-              description=newObject.description
-              descriptionVn=newObject.descriptionVn
-
-              newCardTitle="Award name"
-              newCardTitleVn="Award name VN"
-              newDescription="Description"
-              newDescriptionVn="Description VN"}}
-
-              <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
-      {{/if}}
-      <!-- /.About section award form-->
-
-      <!--Product form-->
-      {{#if (eq whichForm "productForm")}}
-        {{input-form/new-product
-          cardFormName="Add a new product"
-          newObject=newObject
-          categories=categories}}
-
+<!--About section Award form-->
+    {{#if (eq whichForm "awardForm")}}
+        {{input-form/new-award newObject=newObject}}
           <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
-      {{/if}}
-      <!--/.product category form-->
+    {{/if}}
+<!-- /.About section award form-->
 
-      <!--Dish form-->
-      {{#if (eq whichForm "dishForm")}}
-        {{input-form/new-dish
-          cardFormName="Add a new dish"
-          newObject=newObject
-          categories=categories}}
+<!--Product form-->
+    {{#if (eq whichForm "productForm")}}
+      {{input-form/new-product
+        newObject=newObject
+        categories=categories}}
 
-          <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
-      {{/if}}
-      <!--/.dish form-->
+        <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
+    {{/if}}
+<!--/.product category form-->
 
-      <!--new post form-->
-      {{#if (eq whichForm "postForm")}}
-        {{input-form/new-post
-          cardFormName="Add a new post"
-          newObject=newObject
-          model=model}}
+<!--Dish form-->
+    {{#if (eq whichForm "dishForm")}}
+      {{input-form/new-dish
+        cardFormName="Add a new dish"
+        newObject=newObject
+        categories=categories}}
 
-          <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
-      {{/if}}
-      <!--/.new post form-->
+        <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
+    {{/if}}
+<!--/.dish form-->
+
+<!--new post form-->
+    {{#if (eq whichForm "postForm")}}
+      {{input-form/new-post
+        cardFormName="Add a new post"
+        newObject=newObject
+        model=model}}
+
+        <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
+    {{/if}}
+<!--/.new post form-->
     </div> <!--new-form container-->
 {{/if}}
 
 
-
-
-
-{{!-- <div class="row">
-  <div class="col s6">
-    <div class="card-panel">
-      <div class="row">
-        <div class="col s6">
-          <p class="flow-text">{{cardTitle}}</p>
-        </div>
-        <div class="col s6">
-          {{#if isFormShown}}
-          <button class="btn btn-primary disabled" type="button" name="button" {{action "new"}}>{{newButton}}</button>
-          <button class="btn btn-primary red" type="button" name="button" {{action "closeForm"}}>X</button>
-          {{else}}
-          <button class="btn btn-primary" type="button" name="button" {{action "new"}}>{{newButton}}</button>
-          {{/if}}
-        </div>
-      </div>
-    </div>
-  </div>
-</div> --}}
-<!--./row-->
-
-{{!-- <!--Form to add new stuff-->
-{{#if isFormShown}}
-<!--Product category form-->
-{{#if (eq whichForm "catForm")}}
+<!--chef-category card-->
+{{#if (eq whichForm "chefCatForm")}}
 <div class="row">
-  <div class="col s8">
-    <div class="card-panel large">
-      {{input-form/new-card
-        cardFormName="Add a new category"
-        title=newObject.catType
-        titleVn=newObject.catTypeVn
-        description=newObject.description
-        descriptionVn=newObject.descriptionVn
-
-        newCardTitle="Category title"
-        newCardTitleVn="Category title VN"
-        newDescription="Description"
-        newDescriptionVn="Description VN"}}
-
+  {{#each model as |model|}}
+  <div class="col s12 m4">
+    <div class="card-panel small">
       <div class="row">
-        <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
+        {{md-input value=model.catType label="Category name" class="col s12 m6"}}
+        {{md-input value=model.cateTypeVn label="Category Vn" class="col s12 m6"}}
+        {{md-textarea value=model.description label="Description" class="col s12"}}
+        {{md-textarea value=model.descriptionVn label="Description Vn" class="col s12"}}
       </div>
+      <div class="row">
+        {{md-input value=model.imageUrl label="Image Url" class="col s12"}}
+      </div>
+      <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button>
+      <button {{action "delete" model}} type="button" name="button" class="btn red">X</button>
+      {{!-- {{#link-to 'admin-route.product-sections.category' model class="btn"}}New Product{{/link-to}} --}}
     </div>
   </div>
-</div>
-{{/if}} --}}
-<!--/.product category form-->
-
-
-{{!-- <!--About section Award form-->
-{{#if (eq whichForm "awardForm")}}
-<div class="row">
-  <div class="col s8">
-    <div class="card-panel large">
-      {{input-form/new-card
-        cardFormName="Add a new award"
-        title=newObject.title
-        titleVn=newObject.titleVn
-        description=newObject.description
-        descriptionVn=newObject.descriptionVn
-
-        newCardTitle="Award name"
-        newCardTitleVn="Award name VN"
-        newDescription="Description"
-        newDescriptionVn="Description VN"}}
-
-      <div class="row">
-        <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
-      </div>
-    </div>
-  </div>
+  {{/each}}
 </div>
 {{/if}}
-<!-- /.About section award form--> --}}
-
-
-{{!-- <!--Product form-->
-{{#if (eq whichForm "productForm")}}
-<div class="row">
-  <div class="col s8">
-    <div class="card-panel large">
-      {{input-form/new-product
-        cardFormName="Add a new product"
-        newObject=newObject
-        categories=categories}}
-
-      <div class="row">
-        <button class="btn btn-primary" type="button" name="button" {{action "save"}}>Save</button>
-      </div>
-    </div>
-  </div>
-</div>
-{{/if}}
-<!--/.product category form--> --}}
-
-{{!-- {{/if}} --}}
-<!--/.form to add new stuff-->
-
+<!--/.Chef category cards-->
 
 <!--Category cards-->
 {{#if (eq whichForm "catForm")}}
@@ -193,18 +101,12 @@
   {{#each model as |model|}}
   <div class="col s12 m4">
     <div class="card-panel small">
-
-      {{input-form/inputs-section
-        valueTitle=model.catType
-        valueTitleVn=model.cateTypeVn
-        valueDescription=model.description
-        valueDescriptionVn=model.descriptionVn
-
-        cardTitle="Product Category"
-        title="Category title"
-        titleVn="Category title VN"
-        description="Description"
-        descriptionVn="Description VN"}}
+      <div class="row">
+        {{md-input value=model.catType label="Category name" class="col s12 m6"}}
+        {{md-input value=model.cateTypeVn label="Category Vn" class="col s12 m6"}}
+        {{md-textarea value=model.description label="Description" class="col s12"}}
+        {{md-textarea value=model.descriptionVn label="Description Vn" class="col s12"}}
+      </div>
 
       <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button>
       <button {{action "delete" model}} type="button" name="button" class="btn red">X</button>
@@ -228,6 +130,7 @@
         valueTitleVn=model.titleVn
         valueDescription=model.description
         valueDescriptionVn=model.descriptionVn
+        valueImageUrl=model.imageUrl
 
         cardTitle="Awards"
         title="Award name"
@@ -254,11 +157,13 @@
       <div class="row">
         {{md-input value=model.title label="Product name" class="col s12 m6"}}
         {{md-input value=model.titleVn label="Product name VN" class="col s12 m6"}}
-        {{md-input value=model.volume label="Volume" class="col s3"}}
-        {{md-input value=model.metric label="Volume VN" class="col s3"}}
+        {{md-input value=model.volume label="Volume" class="col s6"}}
+        {{md-input value=model.metric label="Volume VN" class="col s6"}}
         <p>Category: {{model.productCategory.catType}}</p>
       </div>
-
+      <div class="row">
+        {{md-input value=model.imageUrl label="Image Url" class="col s12"}}
+      </div>
       <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button>
       <button {{action "delete" model}} type="button" name="button" class="btn red">X</button>
     </div>
