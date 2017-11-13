@@ -7,18 +7,16 @@ export default Ember.Route.extend({
   actions: {
     changePassword (passwords) {
       this.get('auth').changePassword(passwords)
+      .then(() => {
+        Materialize.toast('Your password has been changed', 3000, 'blue');
+      })
+      .then(() => {
+        Materialize.toast('Please sign back in', 3000, 'blue');
+      })
       .then(() => this.get('auth').signOut())
       .then(() => this.transitionTo('sign-in'))
-      .then(() => {
-        this.get('flashMessages')
-        .success('Successfully changed your password!');
-      })
-      .then(() => {
-        this.get('flashMessages').warning('You have been signed out.');
-      })
-      .catch(() => {
-        this.get('flashMessages')
-        .danger('There was a problem. Please try again.');
+      .catch((err) => {
+        Materialize.toast(err, 5000, 'red');
       });
     },
   },

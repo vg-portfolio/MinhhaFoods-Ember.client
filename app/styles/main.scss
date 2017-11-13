@@ -3,7 +3,7 @@ body {
 }
 
 li{
-  list-style: none;
+  // list-style: none;
 }
 
 nav {
@@ -12,7 +12,7 @@ nav {
   #navbar {
     position: relative;
     background: rgba(255,255,255,0);
-    z-index: 2;
+    z-index: 1000;
   }
   img {
     min-width: 25%;
@@ -246,7 +246,9 @@ section.about-us {
 
 
 //CONTACT SECTION
-
+.chef-footer-link {
+  color: white;
+}
 
 //ADMIN dashboard
 .admin-dashboard {

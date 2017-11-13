@@ -5,9 +5,8 @@ export default Ember.Component.extend({
 
   user: Ember.computed.alias('auth.credentials.email'),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
-
-  language: Ember.inject.service('language-toggle'),
   router: Ember.inject.service(),
+  language: Ember.inject.service('language-toggle'),
 
   actions: {
     signOut () {
@@ -19,16 +18,17 @@ export default Ember.Component.extend({
     toggleLang(){
       this.get('language').toggleLang();
     },
-
+//Main scroll to action
     scrollTo(section){
-      let target = Ember.$(section);
-      console.log(target);
-      event.preventDefault();
-      Ember.$('html, body').stop().animate({
-          scrollTop: target.offset().top
-      }, 1000);
-      console.log("done");
+      this.get('router').transitionTo('index')
+      .then(() => {
+        let target = Ember.$(section);
+        console.log(target);
+        event.preventDefault();
+        Ember.$('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+      });
     }
-
   },
 });

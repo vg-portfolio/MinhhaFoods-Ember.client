@@ -13,24 +13,24 @@
       <div class="col m2">
         <h6>About Us</h6>
         <ul>
-          <li>{{aboutSection.whyU.title}}</li>
-          <li>{{aboutSection.history.title}}</li>
-          <li>{{aboutSection.awards.title}}</li>
+          <li {{action "scrollTo" "#about-section"}}>{{history.title}}</li>
+          <li {{action "scrollTo" "#about-section"}}>{{whyU.title}}</li>
+          <li {{action "scrollTo" "#about-section"}}>Awards</li>
         </ul>
       </div>
       <div class="col m2">
         <h6>Products</h6>
         <ul>
-          {{#each products as |p|}}
-          <li>{{p.title}}</li>
+          {{#each productCategories as |p|}}
+          <li {{action "scrollTo" "#product-section"}}>{{p.catType}}</li>
           {{/each}}
         </ul>
       </div>
       <div class="col m2">
-        <h6>Chef Tips</h6>
+        <h6>Recipes</h6>
         <ul>
-          {{#each dishes as |d|}}
-          <li>{{d.title}}</li>
+          {{#each chefCategories as |d|}}
+          <p>{{#link-to 'chef-dishes' d class="chef-footer-link"}}{{d.catType}}{{/link-to}}</p>
           {{/each}}
         </ul>
       </div>
@@ -46,7 +46,8 @@
         <h6>Contact Us</h6>
         <li><span>{{contact.companyName}}</span></li>
         <li>Hotline: {{contact.hotline}}</li>
-        <li>Tel: {{contact.tel}} - Fax: {{contact.fax}}</li>
+        <li>Tel: {{contact.tel}}</li>
+        <li>Fax: {{contact.fax}}</li>
       </div>
     </div>
   </section>
