@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/minhha-foods-client';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://floating-lowlands-34227.herokuapp.com/';
+    ENV.apiHost = 'https://minha-api.herokuapp.com/';
   }
 
   return ENV;
