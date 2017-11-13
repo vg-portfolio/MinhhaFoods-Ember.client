@@ -6,6 +6,8 @@ export default DS.Model.extend({
   volume: DS.attr('string'),
   metric: DS.attr('string'),
   imageUrl: DS.attr('string'),
+  details: DS.attr('string'),
+  detailsVn: DS.attr('string'),
   // productCategoryId: DS.attr('string'),
   productCategory: DS.belongsTo('productCategory')
 });

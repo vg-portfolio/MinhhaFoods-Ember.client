@@ -4,18 +4,36 @@
 {{navigation-bar signOut="signOut"}}
 {{banner-image bannerType="dish" model=model}}
 <section class="chef-dishes container center-align">
-  <h4 class="section-heading">
+  <h4 class="section-heading white-text">
     {{model.catType}}
   </h4>
-  <p class="flow-text">{{model.description}}</p>
+  <p class="flow-text white-text">{{model.description}}</p>
 
-  <div class="row">
+  <div class="row dishes">
     {{#each model.dishes as |d|}}
-    <div class="col s12 m4">
+<div class="col s12 m4">
+  {{#md-card title=d.title
+      image=d.imageUrl
+      activator=true
+      id="card-reveal"}}
+      {{#md-card-content}}
+        Details here Details hereDetails hereDetails here Details here Details here Details herev Details here Details here Details here
+      {{/md-card-content}}
+
+      {{#md-card-reveal}}
+          More details here
+          <div class="video-container">
+             <iframe width="560" height="315" src="{{d.youtubeLink}}" frameborder="0" allowfullscreen></iframe>
+           </div>
+      {{/md-card-reveal}}
+
+  {{/md-card}}
+</div>
+    {{!-- <div class="col s12 m4">
       <img class="image-thumb" src="{{d.imageUrl}}" alt="">
 
       <div class="card-panel center-align flow-text">{{d.title}}</div>
-    </div>
+    </div> --}}
     {{/each}}
   </div>
 </section>
