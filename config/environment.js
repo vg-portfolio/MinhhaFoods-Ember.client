@@ -7,6 +7,7 @@ module.exports = function (environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -49,7 +50,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/minha-foods-client';
+    ENV.rootURL = '/minhha-foods-client';
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://floating-lowlands-34227.herokuapp.com/';
   }
