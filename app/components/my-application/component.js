@@ -16,6 +16,9 @@ export default Ember.Component.extend({
           return this.set('isAdminModal', false);
         })
         .then(() => {
+          Ember.$('body').css('overflow-y', 'scroll');
+        })
+        .then(() => {
           return Materialize.toast('You are signed out', 3000, 'blue');
         })
         .then(() => {

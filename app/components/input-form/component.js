@@ -15,9 +15,11 @@ export default Ember.Component.extend({
     update(data){
       // console.log(data);
       this.sendAction('update', data);
+      this.set('newObject', {});
     },
     new(){
       this.set('isFormShown', true);
+      this.set('newObject', {});
       // this.set('showForm', whichForm);
     },
     closeForm(){
