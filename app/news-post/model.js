@@ -5,5 +5,7 @@ export default DS.Model.extend({
   titleVn: DS.attr('string'),
   description: DS.attr('string'),
   descriptionVn: DS.attr('string'),
+  imageUrl: DS.attr('string'),
+  newsDate: DS.attr('string'),
   newsSection: DS.belongsTo('news-section')
 });

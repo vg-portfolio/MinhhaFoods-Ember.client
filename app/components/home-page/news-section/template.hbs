@@ -6,6 +6,26 @@
     {{!-- <p>{{newsSection.description}}</p> --}}
   </div>
 
+
+  <div class="row center-align">
+    {{#each newsPosts as |post|}}
+    <div class="col s12 m4">
+        <div class="news-card">
+          <img class="card product-image hoverable valign-wrapper" src="{{post.imageUrl}}" alt="">
+          <span class="new badge">{{post.newsDate}}</span>
+          {{!-- <div class="hover-info">
+            <p class="center-align flow-text"></p>
+          </div> --}}
+        </div>
+        <div class="center-align">
+          <h5>{{post.title}}</h5>
+          <p class="truncate">{{post.description}}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+{{!--
     <div class="row">
     {{#each newsPosts as |post|}}
       <div class="col s12 m4">
@@ -16,6 +36,6 @@
         <p class="truncate">{{post.description}}</p>
       </div>
     {{/each}}
-    </div>
+    </div> --}}
 
 </section>

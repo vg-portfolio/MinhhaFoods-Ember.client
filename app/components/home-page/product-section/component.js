@@ -24,7 +24,7 @@ export default Ember.Component.extend({
     },//showProducts
     showModal(object){
       this.set('modalIsOpen', true);
-      this.set('displayedObject', object)
+      this.set('displayedObject', object);
       Ember.$('body').css('overflow-y', 'hidden');
     },
     closeModal(){

@@ -1,6 +1,4 @@
 import ENV from 'minh-ha-foods.ember-client/config/environment';
-import DS from 'ember-data';
-import JSONAPIAdapter from 'ember-data/adapters/json-api';
 import ActiveModelAdapter from 'active-model-adapter';
 
 import Ember from 'ember';

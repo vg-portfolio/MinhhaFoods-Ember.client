@@ -216,6 +216,12 @@
         {{md-input value=model.description label="Body" class="col s12"}}
         {{md-input value=model.descriptionVn label="Body VN" class="col s12"}}
       </div>
+      <div class="row">
+        {{md-input label='News Date'
+          value=model.newsDate class="col s12"}}
+        {{md-input label='Image Url'
+          value=model.imageUrl class="col s12"}}
+      </div>
 
       {{!-- <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button> --}}
       <button {{action "delete" model}} type="button" name="button" class="btn red">X</button>

@@ -1,7 +1,5 @@
-import DS from 'ember-data';
 import Ember from 'ember';
 import {ActiveModelSerializer} from 'active-model-adapter';
-const { underscore } = Ember.String;
 
 export default ActiveModelSerializer.extend({
   // modelNameFromPayloadKey(modelName) {

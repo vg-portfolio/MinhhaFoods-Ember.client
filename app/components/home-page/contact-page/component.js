@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   actions: {
     scrollTo(section, transition, model){
       if (section === null) {
-        this.get('router').transitionTo(transition, model)
+        this.get('router').transitionTo(transition, model);
       } else {
         let target = Ember.$(section);
         console.log(target);

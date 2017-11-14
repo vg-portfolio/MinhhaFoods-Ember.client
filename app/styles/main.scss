@@ -243,7 +243,16 @@ section.about-us {
 .news-posts-container {
   margin-top: 2rem;
 }
-
+.news-card img {
+  width: 100%;
+}
+.news-card {
+  position: relative;
+}
+// .hover-info{
+//   z-index: 1000;
+//   position: absolute;
+// }
 
 //CONTACT SECTION
 .chef-footer-link {
