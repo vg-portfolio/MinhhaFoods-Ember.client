@@ -2,10 +2,6 @@ body {
   background-color: #f5f5f5;
 }
 
-li{
-  // list-style: none;
-}
-
 nav {
   position: absolute;
   background-color: $theme-color;
@@ -62,7 +58,6 @@ section {
 }
 #banner-image-dish {
   position: absolute;
-  // height: 25rem;
   height: 30rem;
   img {
     width: 100%;
@@ -77,7 +72,6 @@ section {
   .main-scroll {
     margin: 0 auto;
     display: block;
-    // left: 50%;
     transform: translate(10%);
   }
 }
@@ -111,8 +105,6 @@ section {
 //ABOUT SECTION
 .image-row {
   display: inline-block;
-  overflow-x: scroll;
-  overflow-y: hidden;
   margin-bottom: 0;
   margin-top: 2rem;
   .card{
@@ -123,7 +115,7 @@ section {
     padding: 0;
   }
   img {
-    // width: 27rem;
+    //image- width: 27rem;
     width: 100%;
   }
 }
@@ -138,8 +130,6 @@ section.about-us {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  .card-panel {
-  }
 }
 
 //PRODUCT SECTION
@@ -153,7 +143,6 @@ section.about-us {
   }
   .image-row {
     margin-bottom: 10rem;
-
   }
 }
 
@@ -163,40 +152,21 @@ section.about-us {
    overflow-x: scroll;
    -webkit-overflow-scrolling: touch;
    -ms-overflow-style: -ms-autohiding-scrollbar;
+   .col {
+     margin: 0 !important;
+   }
  }
 
  .product-card  {
-   // flex: 0 0 auto;
    margin: 0 !important;
    .product-image {
-     // position: relative;
      height: 15rem;
-     // .hover-info{
-     //   display: block;
-     //   position: absolute;
-     //   z-index: 99;
-     //   margin: 0 auto;
-     //   text-align: center;
-     //   font-weight: bold;
-     //   color: white;
-     // }
-     // &:hover {
-     //   .hover-info{
-     //     display: block;
-     // }
-     // }
    }
  }
 
  .product-details {
    padding-top: 5%;
  }
-
-.product-image-row {
-  .col {
-    margin: 0 !important;
-  }
-}
 
 .modal-content {
   .card-panel {
@@ -259,10 +229,6 @@ section.about-us {
   z-index: 1000;
   right: 0;
 }
-// .hover-info{
-//   z-index: 1000;
-//   position: absolute;
-// }
 
 //CONTACT SECTION
 .chef-footer-link {
@@ -299,7 +265,4 @@ button.admin-navigation {
   right: 0;
   z-index: 100;
   top: 10rem;
-}
-@media query {
-
 }
