@@ -11,8 +11,8 @@
     {{#each newsPosts as |post|}}
     <div class="col s12 m4">
         <div class="news-card">
+          <span class="news-date-badge badge">{{post.newsDate}}</span>
           <img class="card product-image hoverable valign-wrapper" src="{{post.imageUrl}}" alt="">
-          <span class="new badge">{{post.newsDate}}</span>
           {{!-- <div class="hover-info">
             <p class="center-align flow-text"></p>
           </div> --}}

@@ -146,14 +146,14 @@ section.about-us {
 .our-products {
   padding-top: 3rem;
   // margin-bottom: 10rem;
-  height: 50rem;
+  height: 40rem;
+  margin-bottom: 15rem;
   .row {
     margin-bottom: 0;
   }
   .image-row {
     margin-bottom: 10rem;
 
-    float: left;
   }
 }
 
@@ -161,7 +161,6 @@ section.about-us {
    display: flex;
    flex-wrap: nowrap;
    overflow-x: scroll;
-   justify-content: flex-start;
    -webkit-overflow-scrolling: touch;
    -ms-overflow-style: -ms-autohiding-scrollbar;
  }
@@ -171,7 +170,7 @@ section.about-us {
    margin: 0 !important;
    .product-image {
      // position: relative;
-     height: 18rem;
+     height: 15rem;
      // .hover-info{
      //   display: block;
      //   position: absolute;
@@ -192,6 +191,12 @@ section.about-us {
  .product-details {
    padding-top: 5%;
  }
+
+.product-image-row {
+  .col {
+    margin: 0 !important;
+  }
+}
 
 .modal-content {
   .card-panel {
@@ -248,6 +253,11 @@ section.about-us {
 }
 .news-card {
   position: relative;
+}
+.news-date-badge {
+  position: absolute;
+  z-index: 1000;
+  right: 0;
 }
 // .hover-info{
 //   z-index: 1000;

@@ -16,14 +16,14 @@
 
   <div class="product-image-row row center-align">
     {{#each selectedContent as |pro|}}
-
-      <div class="product-card col s12 m4" {{action "showModal" pro}}>
-        <img class="card product-image hoverable valign-wrapper" src="{{pro.imageUrl}}" alt="">
+      <div class="col s12 m4">
+        <div class="product-card" {{action "showModal" pro}}>
+          <img class="card product-image hoverable" src="{{pro.imageUrl}}" alt="">
+        </div>
         <div class="hover-info">
           <p class="center-align flow-text">{{pro.title}}</p>
         </div>
       </div>
-
     {{/each}}
   </div>
 
