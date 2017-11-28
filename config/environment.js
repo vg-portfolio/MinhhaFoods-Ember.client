@@ -50,7 +50,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/minhha-foods-client';
+    ENV.rootURL = '/';
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://minha-api.herokuapp.com';
   }
