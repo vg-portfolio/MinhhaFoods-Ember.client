@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  selectedCat: null,
 
+  selectedCat: null,
   modalIsOpen: false,
   displayedObject: {},
 
