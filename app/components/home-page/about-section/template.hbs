@@ -1,7 +1,7 @@
 <section class="about-us">
   <div class="about-container container">
     <span id="about-section">Welcome to</span>
-    {{#if language.viet}}
+    {{#if showViet}}
     <h4 class="section-heading">{{aboutSection.titleVn}}</h4>
     <span>♡</span>
     <p class="flow-text">{{aboutSection.descriptionVn}}</p>
@@ -14,9 +14,15 @@
 
   <div class="about-us">
     <ul class="link-button center-align">
+      {{#if showViet}}
+      <li><a class="sub-nav-links" {{action "showSelectedContent" history}}>{{history.titleVn}}</a></li>
+      <li><a class="sub-nav-links" {{action "showSelectedContent" whyU}}>{{whyU.titleVn}}</a></li>
+      <li><a class="sub-nav-links" {{action "showAwards" awards}}>Awards</a></li>
+      {{else}}
       <li><a class="sub-nav-links" {{action "showSelectedContent" history}}>{{history.title}}</a></li>
       <li><a class="sub-nav-links" {{action "showSelectedContent" whyU}}>{{whyU.title}}</a></li>
       <li><a class="sub-nav-links" {{action "showAwards" awards}}>Awards</a></li>
+      {{/if}}
     </ul>
   </div>
 
@@ -51,11 +57,19 @@
                 image=s.imageUrl
                 activator=true}}
                 {{#md-card-content}}
+                  {{#if showViet}}
+                  <p class="truncate">{{s.descriptionVn}}</p>
+                  {{else}}
                   <p class="truncate">{{s.description}}</p>
+                  {{/if}}
                 {{/md-card-content}}
 
                 {{#md-card-reveal}}
+                  {{#if showViet}}
+                    {{s.descriptionVn}}
+                  {{else}}
                     {{s.description}}
+                  {{/if}}
                 {{/md-card-reveal}}
 
             {{/md-card}}
@@ -65,7 +79,11 @@
       </div>
     {{/md-modal}}
     {{else}}
-      <p>{{selectedContent.description}}</p>
+      {{#if}}
+      <p>{{selectedContent.descriptionVn}}</p>
+      {{else}}
+      <p>{{selectedContent.descriptionVn}}</p>
+      {{/if}}
     {{/if}}
   </div>
 
