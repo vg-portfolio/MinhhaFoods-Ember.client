@@ -4,6 +4,15 @@
   {{!-- <div class="banner-container">
     <button class="btn main-scroll" type="button" name="button" {{action "scrollTo" "#contact-section"}}>V</button>
   </div> --}}
+  {{!-- {{#if (eq toggleViet.showViet)}}
+  <button class="btn" type="button" name="button" {{action "toggleViet"}}>EN</button>
+  {{/if}} --}}
+  {{#if showViet}}
+  <button class="btn" type="button" name="button" {{action "toggleViet"}}>EN</button>
+  {{/if}}
+  {{#if (not showViet)}}
+  <button class="btn" type="button" name="button" {{action "toggleViet"}}>VN</button>
+  {{/if}}
 </div>
 {{/if}}
 

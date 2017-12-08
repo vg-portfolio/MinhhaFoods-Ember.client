@@ -2,7 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
-  
+  toggleLang: Ember.inject.service(),
+
   model() {
     return Ember.RSVP.hash({
       aboutSection: this.store.findAll('about-section')
@@ -63,6 +64,11 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    toggleViet(){
+      this.get('toggleLang').toggleViet();
+      console.log("TOGGLEING");
+    },
+
     signOut () {
       this.get('auth').signOut()
         // .then(() => this.get('store').unloadAll())

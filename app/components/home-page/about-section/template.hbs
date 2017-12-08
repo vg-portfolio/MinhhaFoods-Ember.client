@@ -1,7 +1,7 @@
 <section class="about-us">
   <div class="about-container container">
     <span id="about-section">Welcome to</span>
-    {{#if showViet}}
+    {{#if toggleLang.showViet}}
     <h4 class="section-heading">{{aboutSection.titleVn}}</h4>
     <span>♡</span>
     <p class="flow-text">{{aboutSection.descriptionVn}}</p>
@@ -14,7 +14,7 @@
 
   <div class="about-us">
     <ul class="link-button center-align">
-      {{#if showViet}}
+      {{#if toggleLang.showViet}}
       <li><a class="sub-nav-links" {{action "showSelectedContent" history}}>{{history.titleVn}}</a></li>
       <li><a class="sub-nav-links" {{action "showSelectedContent" whyU}}>{{whyU.titleVn}}</a></li>
       <li><a class="sub-nav-links" {{action "showAwards" awards}}>Awards</a></li>
@@ -57,7 +57,7 @@
                 image=s.imageUrl
                 activator=true}}
                 {{#md-card-content}}
-                  {{#if showViet}}
+                  {{#if toggleLang.showViet}}
                   <p class="truncate">{{s.descriptionVn}}</p>
                   {{else}}
                   <p class="truncate">{{s.description}}</p>
@@ -65,7 +65,7 @@
                 {{/md-card-content}}
 
                 {{#md-card-reveal}}
-                  {{#if showViet}}
+                  {{#if toggleLang.showViet}}
                     {{s.descriptionVn}}
                   {{else}}
                     {{s.description}}
@@ -79,10 +79,10 @@
       </div>
     {{/md-modal}}
     {{else}}
-      {{#if}}
+      {{#if toggleLang.showViet}}
       <p>{{selectedContent.descriptionVn}}</p>
       {{else}}
-      <p>{{selectedContent.descriptionVn}}</p>
+      <p>{{selectedContent.description}}</p>
       {{/if}}
     {{/if}}
   </div>
