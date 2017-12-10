@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   cat: [],
   // selectedCat: null,
+  toggleLang: Ember.inject.service(),
 
   selectedContent: Ember.computed.filter('cat', function(item) {
     // if (this.get('selectedCat') === null) {

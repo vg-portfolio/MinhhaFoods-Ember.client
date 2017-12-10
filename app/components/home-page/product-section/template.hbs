@@ -1,8 +1,14 @@
 <section id="product-section" class="our-products">
   <div class="product-section-container container">
+    {{#if toggleLang.showViet}}
+    <h4>{{productSection.titleVn}}</h4>
+    <span>♡</span>
+    <p class="flow-text">{{productSection.descriptionVn}}</p>
+    {{else}}
     <h4>{{productSection.title}}</h4>
     <span>♡</span>
     <p class="flow-text">{{productSection.description}}</p>
+    {{/if}}
   </div>
 
   <div class="product-section link-button">
@@ -44,7 +50,11 @@
             </div>
             <div class="col s12 m6">
               <div class="product-details">
+                {{#if toggleLang.showViet}}
+                {{displayedObject.detailsVn}}
+                {{else}}
                 {{displayedObject.details}}
+                {{/if}}
               </div>
             </div>
           </div>

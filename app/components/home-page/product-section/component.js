@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  toggleLang: Ember.inject.service(),
 
   selectedCat: null,
   modalIsOpen: false,
