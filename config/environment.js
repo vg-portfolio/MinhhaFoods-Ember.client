@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'minh-ha-foods.ember-client',
+    modulePrefix: 'minh-ha-foods',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

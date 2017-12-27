@@ -1,4 +1,4 @@
-import ENV from 'minh-ha-foods.ember-client/config/environment';
+import ENV from 'minh-ha-foods/config/environment';
 import ActiveModelAdapter from 'active-model-adapter';
 
 import Ember from 'ember';

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
 
-import ENV from 'minh-ha-foods.ember-client/config/environment';
+import ENV from 'minh-ha-foods/config/environment';
 
 export default AjaxService.extend({
   host: ENV.apiHost,
