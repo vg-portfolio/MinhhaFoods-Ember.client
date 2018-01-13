@@ -26,20 +26,33 @@
     </ul>
   </div>
 
+
   <div class="row image-row">
+
+          {{!-- <img class="height" src="{{aboutSection.imageUrl}}" alt=""> --}}
+{{!-- <div class="col s6 m4 height" style="background-image:url('{{aboutSection.imageUrl}}');">
+</div> --}}
+
+    {{!-- {{#md-card title="Card Title"
+        class="col s6 m4 about-categories height"
+        titleClass="orange-text"
+        image=aboutSection.imageUrl
+        id="image-card"}}
+    {{/md-card}} --}}
+
     <div class="col s12 m4">
       <div class="card about-categories">
-        {{lazy-image url=aboutSection.imageUrl errorText='Something went wrong.' height=400}}
+        {{lazy-image class="img-responsive" url=aboutSection.imageUrl errorText='Something went wrong.'}}
       </div>
     </div>
     <div class="col s12 m4">
       <div class="card about-categories">
-        {{lazy-image url=aboutSection.imageUrl2 errorText='Something went wrong.' height=400}}
+        {{lazy-image class="img-responsive" url=aboutSection.imageUrl2 errorText='Something went wrong.'}}
       </div>
     </div>
     <div class="col s12 m4">
       <div class="card about-categories">
-        {{lazy-image url=aboutSection.imageUrl3 errorText='Something went wrong.' height=400}}
+        {{lazy-image class="img-responsive" url=aboutSection.imageUrl3 errorText='Something went wrong.'}}
       </div>
     </div>
   </div>
