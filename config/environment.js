@@ -8,6 +8,11 @@ module.exports = function (environment) {
     rootURL: '/',
     locationType: 'auto',
     apiHost: 'http://localhost:3000/',
+    googleFonts: [
+      'Montserrat:400,500',
+      'Kaushan+Script',
+      'Lato:700'
+    ],
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

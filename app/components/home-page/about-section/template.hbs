@@ -1,6 +1,6 @@
 <section class="about-us">
   <div class="about-container container">
-    <span id="about-section">Welcome to</span>
+    <span class="section-heading" id="about-section">Welcome to</span>
     {{#if toggleLang.showViet}}
     <h4 class="section-heading">{{aboutSection.titleVn}}</h4>
     <span>♡</span>
@@ -28,18 +28,18 @@
 
   <div class="row image-row">
     <div class="col s12 m4">
-      <div class="card chef-image-wrapper valign-wrapper">
-        <img src="{{aboutSection.imageUrl}}" alt="">
+      <div class="card about-categories">
+        {{lazy-image url=aboutSection.imageUrl errorText='Something went wrong.' height=400}}
       </div>
     </div>
     <div class="col s12 m4">
-      <div class="card chef-image-wrapper valign-wrapper">
-        <img src="{{aboutSection.imageUrl2}}" alt="">
+      <div class="card about-categories">
+        {{lazy-image url=aboutSection.imageUrl2 errorText='Something went wrong.' height=400}}
       </div>
     </div>
     <div class="col s12 m4">
-      <div class="card chef-image-wrapperaboutSection valign-wrapper">
-        <img src="{{aboutSection.imageUrl3}}" alt="">
+      <div class="card about-categories">
+        {{lazy-image url=aboutSection.imageUrl3 errorText='Something went wrong.' height=400}}
       </div>
     </div>
   </div>

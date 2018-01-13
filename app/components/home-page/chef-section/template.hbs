@@ -18,7 +18,7 @@
     {{!-- <a {{action "showSelectedContent" cat}}> --}}
       <div class="col s12 m4">
         <div class="card hoverable chef-image-wrapper valign-wrapper">
-          <img src="{{cat.imageUrl}}" alt="">
+          {{lazy-image url=cat.imageUrl}}
           <p>{{cat.catType}}</p>
         </div>
       </div>

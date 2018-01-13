@@ -1,11 +1,11 @@
 <section id="product-section" class="our-products">
   <div class="product-section-container container">
     {{#if toggleLang.showViet}}
-    <h4>{{productSection.titleVn}}</h4>
+    <h4 class="section-heading">{{productSection.titleVn}}</h4>
     <span>♡</span>
     <p class="flow-text">{{productSection.descriptionVn}}</p>
     {{else}}
-    <h4>{{productSection.title}}</h4>
+    <h4 class="section-heading">{{productSection.title}}</h4>
     <span>♡</span>
     <p class="flow-text">{{productSection.description}}</p>
     {{/if}}
@@ -24,7 +24,7 @@
     {{#each selectedContent as |pro|}}
       <div class="col s12 m4">
         <div class="product-card" {{action "showModal" pro}}>
-          <img class="card product-image hoverable" src="{{pro.imageUrl}}" alt="">
+          {{lazy-image url=pro.imageUrl class="card product-image hoverable"}}
         </div>
         <div class="hover-info">
           <p class="center-align flow-text">{{pro.title}}</p>
