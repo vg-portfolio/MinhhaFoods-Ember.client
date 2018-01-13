@@ -15,14 +15,14 @@
   <div class="image-row row">
     {{#each chefCategories as |cat|}}
     {{#link-to 'chef-dishes' cat}}
-    {{!-- <a {{action "showSelectedContent" cat}}> --}}
-      <div class="col s12 m4">
-        <div class="card hoverable chef-image-wrapper valign-wrapper">
-          {{lazy-image url=cat.imageUrl}}
-          <p>{{cat.catType}}</p>
-        </div>
+    <div class="col s12 m4 product-column">
+      <div class="product-card hoverable">
+        {{lazy-image url=cat.imageUrl class="product-image"}}
       </div>
-    {{!-- </a> --}}
+      <div class="hover-info">
+        <p class="center-align chef-category-name flow-text">{{cat.catType}}</p>
+      </div>
+    </div>
     {{/link-to}}
     {{/each}}
   </div>

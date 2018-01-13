@@ -8304,24 +8304,19 @@ section {
   .sub-nav-links a:active {
     color: #71a020 !important; }
 
-.image-row {
-  display: inline-block;
-  margin-bottom: 0;
-  margin-top: 2rem; }
-  .image-row .card {
-    padding: 0;
-    box-sizing: border-box; }
-  .image-row .col {
-    padding: 0; }
-  .image-row img {
-    width: 100%; }
-
-.about-categories {
-  max-width: 100%;
-  height: auto; }
-
 section.about-us {
   padding-top: 0; }
+  section.about-us .image-row {
+    margin-bottom: 0;
+    margin-top: 2rem; }
+    section.about-us .image-row .col {
+      padding: 0; }
+      section.about-us .image-row .col .about-card {
+        overflow: hidden;
+        height: 15rem; }
+        section.about-us .image-row .col .about-card .about-image {
+          min-width: 100%;
+          height: 100%; }
 
 .awards-flex {
   display: -webkit-box;
@@ -8334,14 +8329,13 @@ section.about-us {
   -ms-overflow-style: -ms-autohiding-scrollbar; }
 
 .our-products {
-  padding-top: 3rem; }
+  padding-top: 3rem;
+  padding-bottom: 0; }
   .our-products a {
     font-family: 'Lato';
     font-weight: 700; }
   .our-products .row {
     margin-bottom: 0; }
-  .our-products .image-row {
-    margin-bottom: 10rem; }
 
 .product-image-row {
   display: -webkit-box;
@@ -8381,21 +8375,8 @@ section.about-us {
 .chef-section .section-heading {
   margin-top: 5rem; }
 
-.chef-section .chef-image-wrapper {
-  display: inline-block;
-  position: relative; }
-  .chef-section .chef-image-wrapper p {
-    position: absolute;
-    font-size: 2rem;
-    top: 40%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -100%);
-            transform: translate(-50%, -100%);
-    color: white;
-    font-weight: 500;
-    display: none; }
-  .chef-section .chef-image-wrapper:hover p {
-    display: block; }
+.chef-category-name {
+  color: black; }
 
 .chef-dishes {
   position: relative; }
