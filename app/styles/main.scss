@@ -88,8 +88,8 @@ section {
 }
 
 .sub-nav-links {
-  text-transform: uppercase;
   color: black;
+  font-size: 1.5em;
   margin-left: 0.5em;
   margin-right:  0.5em;
   font-family: "Kaushan Script";
@@ -264,4 +264,9 @@ button.admin-navigation {
   right: 0;
   z-index: 100;
   top: 10rem;
+}
+
+.modal {
+  width: 90%;
+  height: auto;
 }
