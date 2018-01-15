@@ -222,11 +222,27 @@ section.about-us {
 }
 .news-card {
   position: relative;
+  height: 15rem;
+  overflow: hidden;
+  .news-image {
+    width: 100%;
+    height: 100%;
+  }
 }
 .news-date-badge {
   position: absolute;
   z-index: 1000;
   right: 0;
+}
+.card-panel.news-date-badge {
+  padding: 0.2rem 0.5rem;
+  margin: 0;
+  background-color: $theme-color;
+}
+.news-description {
+  height: 4.5rem;
+  display: flex;
+  overflow-y: hidden;
 }
 
 //CONTACT SECTION
