@@ -81,7 +81,7 @@
         {{md-textarea value=model.descriptionVn label="Description Vn" class="col s12"}}
       </div>
       <div class="row">
-        {{md-input value=model.imageUrl label="Image Url" class="col s12"}}
+        {{md-textarea value=model.imageUrl label="Image Url" class="col s12"}}
       </div>
       <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button>
       <button {{action "delete" model}} type="button" name="button" class="btn red">X</button>
@@ -162,7 +162,7 @@
         <p>Category: {{model.productCategory.catType}}</p>
       </div>
       <div class="row">
-        {{md-input value=model.imageUrl label="Image Url" class="col s12"}}
+        {{md-textarea value=model.imageUrl label="Image Url" class="col s12"}}
       </div>
       <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button>
       <button {{action "delete" model}} type="button" name="button" class="btn red">X</button>
@@ -185,12 +185,12 @@
         {{md-input value=model.titleVn label="Dish VN" class="col s12 m6"}}
       </div>
       <div class="row">
-        {{md-input value=model.details label="Details" class="col s12"}}
-        {{md-input value=model.detailsVn label="Details VN" class="col s12"}}
+        {{md-textarea value=model.details label="Details" class="col s12"}}
+        {{md-textarea value=model.detailsVn label="Details VN" class="col s12"}}
       </div>
       <div class="">
-        {{md-input value=model.youtubeLink label="Video" class="col s12"}}
-        {{md-input value=model.imageUrl label="Image Url" class="col s12"}}
+        {{md-textarea value=model.youtubeLink label="Video" class="col s12"}}
+        {{md-textarea value=model.imageUrl label="Image Url" class="col s12"}}
         <p>Category: {{model.chefCategory.catType}}</p>
       </div>
       <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button>
@@ -209,18 +209,24 @@
   <div class="col s12 m4">
     <div class="card-panel small">
       <div class="row">
-        {{md-input value=model.title label="News title" class="col s12 m6"}}
-        {{md-input value=model.titleVn label="News VN" class="col s12 m6"}}
+        <h3>{{model.title}}</h3>
+        <h4>{{model.titleVn}}</h4>
+        <p>{{model.newsDate}}</p>
+        {{!-- {{md-input value=model.title label="News title" class="col s12 m6"}}
+        {{md-input value=model.titleVn label="News VN" class="col s12 m6"}} --}}
       </div>
       <div class="row">
-        {{md-input value=model.description label="Body" class="col s12"}}
-        {{md-input value=model.descriptionVn label="Body VN" class="col s12"}}
+        <p>{{model.description}}</p>
+        <p>{{model.descriptionVn}}</p>
+        {{!-- {{md-textarea value=model.description label="Body" class="col s12"}}
+        {{md-textarea value=model.descriptionVn label="Body VN" class="col s12"}} --}}
       </div>
-      <div class="row">
-        {{md-input label='News Date'
+      <div class="row image-url">
+        <p>{{model.imageUrl}}</p>
+        {{!-- {{md-input label='News Date'
           value=model.newsDate class="col s12"}}
         {{md-input label='Image Url'
-          value=model.imageUrl class="col s12"}}
+          value=model.imageUrl class="col s12"}} --}}
       </div>
 
       {{!-- <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button> --}}
