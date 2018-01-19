@@ -4,10 +4,12 @@
 {{!-- {{navigation-bar}} --}}
 {{banner-image bannerType="dish" model=model}}
 <section class="chef-dishes container center-align">
-  <h4 class="section-heading white-text">
-    {{model.catType}}
-  </h4>
-  <p class="flow-text white-text">{{model.description}}</p>
+  <div class="section-heading">
+    <h4 class="white-text">
+      {{model.catType}}
+    </h4>
+    <p class="flow-text white-text">{{model.description}}</p>
+  </div>
 
   <div class="row dishes">
     {{#each model.dishes as |d|}}

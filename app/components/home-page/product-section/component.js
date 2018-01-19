@@ -7,7 +7,10 @@ export default Ember.Component.extend({
   modalIsOpen: false,
   displayedObject: {},
 
-  selectedContent: Ember.computed.filter('products', function(item) {
+  sortedSelected: Ember.computed.sort('products', 'sortProperty'),
+  sortProperty: ['title:asc'],
+
+  selectedContent: Ember.computed.filter('sortedSelected', function(item) {
     if (this.get('selectedCat') === null) {
       return true;
     }

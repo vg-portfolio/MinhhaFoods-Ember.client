@@ -11,6 +11,7 @@
     {{/if}}
   </div>
 
+{{! toggle catgory buttons}}
   <div class="product-section link-button">
     <ul>
       <li><a class="btn" {{action "showSelectedContent"}}>All</a></li>
@@ -19,7 +20,7 @@
       {{/each}}
     </ul>
   </div>
-
+{{! row of product images}}
   <div class="product-image-row row">
     {{#each selectedContent as |pro|}}
     <div class="col s6 m4 product-column" {{action "showModal" pro}}>
@@ -32,7 +33,7 @@
     </div>
     {{/each}}
   </div>
-
+{{! modal to display product details}}
   {{#if modalIsOpen}}
   {{#md-modal close='closeModal' class="test-modal"}}
       <div class="modal-content center-align">

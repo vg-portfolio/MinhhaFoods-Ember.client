@@ -4,18 +4,12 @@ body {
 }
 
 nav {
-  position: absolute;
   background-color: $theme-color;
+  position: absolute;
+  background: rgba(255,255,255,0);
+  box-shadow: none;
   #navbar {
-    position: relative;
-    background: rgba(255,255,255,0);
     z-index: 1000;
-  }
-  img {
-    min-width: 25%;
-    float: left;
-    padding-left: 15em;
-    position: absolute;
   }
 }
 
@@ -51,11 +45,12 @@ section {
   text-align: center;
 }
 
-#banner-image {
-  display: inline-block;
-  position: relative;
-  img{
+.banner-image {
+  display: block;
+  width: 100%;
+  img {
     width: 100%;
+
   }
 }
 #banner-image-dish {
@@ -204,15 +199,18 @@ section.about-us {
 //CHEF dish
 .chef-dishes{
   .section-heading {
-    margin-top: 5rem;
+    margin-top: 0;
   }
   position: relative;
   .dishes.row {
     margin-top: 20%;
   }
 }
-
-
+.chef-banner {
+  position: absolute;
+  height: 35rem;
+  overflow-y: hidden;
+}
 //NEWS SECTION
 .news-posts-container {
   margin-top: 2rem;
