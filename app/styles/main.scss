@@ -250,6 +250,25 @@ section.about-us {
 .chef-footer-link {
   color: white;
 }
+#contact-section {
+  position: relative;
+  .row {
+    margin-bottom: 0;
+  }
+}
+
+.wrapper{
+  position: absolute;
+  top: -2.4rem;
+  .scroll-to-top {
+    border-top-left-radius: 150rem;
+    border-top-right-radius: 150rem;
+  }
+}
+
+button.scroll-to-top {
+  background-color: rgb(13, 23, 37);
+}
 
 //ADMIN dashboard
 .admin-dashboard {
