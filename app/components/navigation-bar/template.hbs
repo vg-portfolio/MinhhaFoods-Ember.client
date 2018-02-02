@@ -1,5 +1,5 @@
 <nav>
-  <div class="nav-wrapper" id="navbar">
+  <div class="nav-wrapper hidden" id="navbar">
     <a  {{action "linkToIndex"}} href="" id="logo">
       <!--Revise brando logo file to not have too much footprint-->
       {{!-- <img src="https://scontent.fbed1-2.fna.fbcdn.net/v/t34.0-12/22447543_1488985051400037_1842875517_n.png?oh=57ebaf6b24eec7a09a9043543ab8837b&oe=59E2F325" alt=""> --}}
@@ -7,11 +7,11 @@
     {{!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> --}}
     <ul class="navbar-links right hide-on-small-only">
       {{!-- <a {{action "toggleLang"}}>Lang</a> --}}
-      <li><a {{action "scrollTo" '#about-section'}}>About Us</a></li>
-      <li><a {{action "scrollTo" '#product-section'}}>Products</a></li>
-      <li><a {{action "scrollTo" '#chef-section'}}>Chef Tips</a></li>
-      <li><a {{action "scrollTo" '#news-section'}}>News</a></li>
-      <li><a {{action "scrollTo" '#contact-section'}}>Contact Us</a></li>
+      <li><a class="nav-links" {{action "scrollTo" '#about-section'}}>About Us</a></li>
+      <li><a class="nav-links" {{action "scrollTo" '#product-section'}}>Products</a></li>
+      <li><a class="nav-links" {{action "scrollTo" '#chef-section'}}>Chef Tips</a></li>
+      <li><a class="nav-links" {{action "scrollTo" '#news-section'}}>News</a></li>
+      <li><a class="nav-links" {{action "scrollTo" '#contact-section'}}>Contact Us</a></li>
       {{!-- <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
       <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li> --}}
     </ul>

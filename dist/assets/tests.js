@@ -357,7 +357,7 @@ define('minh-ha-foods/tests/components/banner-image/component.jshint.lint-test',
   QUnit.module('JSHint | components/banner-image/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/banner-image/component.js should pass jshint.\ncomponents/banner-image/component.js: line 8, col 18, \'lang\' is defined but never used.\n\n1 error');
+    assert.ok(false, 'components/banner-image/component.js should pass jshint.\ncomponents/banner-image/component.js: line 12, col 18, \'lang\' is defined but never used.\n\n1 error');
   });
 });
 define('minh-ha-foods/tests/components/category-form/component.jshint.lint-test', [], function () {
@@ -412,6 +412,15 @@ define('minh-ha-foods/tests/components/home-page/contact-page/component.jshint.l
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'components/home-page/contact-page/component.js should pass jshint.');
+  });
+});
+define('minh-ha-foods/tests/components/home-page/image-row/component.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | components/home-page/image-row/component.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/home-page/image-row/component.js should pass jshint.');
   });
 });
 define('minh-ha-foods/tests/components/home-page/news-section/component.jshint.lint-test', [], function () {
@@ -555,7 +564,7 @@ define('minh-ha-foods/tests/components/my-application/component.jshint.lint-test
   QUnit.module('JSHint | components/my-application/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/my-application/component.js should pass jshint.\ncomponents/my-application/component.js: line 22, col 18, \'Materialize\' is not defined.\ncomponents/my-application/component.js: line 31, col 18, \'Materialize\' is not defined.\n\n2 errors');
+    assert.ok(false, 'components/my-application/component.js should pass jshint.\ncomponents/my-application/component.js: line 26, col 18, \'Materialize\' is not defined.\ncomponents/my-application/component.js: line 35, col 18, \'Materialize\' is not defined.\n\n2 errors');
   });
 });
 define('minh-ha-foods/tests/components/navbar-header/component.jshint.lint-test', [], function () {
@@ -583,6 +592,15 @@ define('minh-ha-foods/tests/components/product-modal/component.jshint.lint-test'
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'components/product-modal/component.js should pass jshint.');
+  });
+});
+define('minh-ha-foods/tests/components/render-later/component.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | components/render-later/component.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'components/render-later/component.js should pass jshint.\ncomponents/render-later/component.js: line 3, col 3, \'Component\' is defined but never used.\n\n1 error');
   });
 });
 define('minh-ha-foods/tests/contact/model.jshint.lint-test', [], function () {
@@ -1389,6 +1407,44 @@ define('minh-ha-foods/tests/integration/components/home-page/contact-page/compon
     assert.ok(true, 'integration/components/home-page/contact-page/component-test.js should pass jshint.');
   });
 });
+define('minh-ha-foods/tests/integration/components/home-page/image-row/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('home-page/image-row', 'Integration | Component | home page/image row', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      'id': '2m+HpyRq',
+      'block': '{"statements":[["append",["unknown",["home-page/image-row"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      'id': 'lLcA2n4X',
+      'block': '{"statements":[["text","\\n"],["block",["home-page/image-row"],null,null,0],["text","  "]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      template block text\\n"]],"locals":[]}],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('minh-ha-foods/tests/integration/components/home-page/image-row/component-test.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/home-page/image-row/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/home-page/image-row/component-test.js should pass jshint.');
+  });
+});
 define('minh-ha-foods/tests/integration/components/home-page/news-section/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleForComponent)('home-page/news-section', 'Integration | Component | home page/news section', {
@@ -2109,6 +2165,44 @@ define('minh-ha-foods/tests/integration/components/product-modal/component-test.
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/product-modal/component-test.js should pass jshint.');
+  });
+});
+define('minh-ha-foods/tests/integration/components/render-later/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('render-later', 'Integration | Component | render later', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      'id': 'wBR95Emd',
+      'block': '{"statements":[["append",["unknown",["render-later"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      'id': 'K6LjXr5o',
+      'block': '{"statements":[["text","\\n"],["block",["render-later"],null,null,0],["text","  "]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      template block text\\n"]],"locals":[]}],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('minh-ha-foods/tests/integration/components/render-later/component-test.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/render-later/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/render-later/component-test.js should pass jshint.');
   });
 });
 define('minh-ha-foods/tests/language-toggle/service.jshint.lint-test', [], function () {

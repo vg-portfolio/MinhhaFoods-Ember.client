@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import InViewportMixin from 'ember-in-viewport';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(InViewportMixin, {
   toggleLang: Ember.inject.service(),
 
   selectedCat: null,
@@ -9,6 +10,11 @@ export default Ember.Component.extend({
 
   sortedSelected: Ember.computed.sort('products', 'sortProperty'),
   sortProperty: ['title:asc'],
+
+  didEnterViewport(){
+    this.$('.product-section-container').toggle(1000);
+    this.$('.product-section').toggle(1500);
+  },
 
   selectedContent: Ember.computed.filter('sortedSelected', function(item) {
     if (this.get('selectedCat') === null) {

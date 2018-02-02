@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import InViewportMixin from 'ember-in-viewport';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(InViewportMixin, {
   store: Ember.inject.service(),
   toggleLang: Ember.inject.service(),
   // isHistory: true,
@@ -8,10 +9,6 @@ export default Ember.Component.extend({
   // isAwards: false,
   awardShowing: false,
   selectedContent: [],
-
-  // ready: function(){
-  //   Ember.$('.carousel').carousel();
-  // }.on('didInsertElement'),
 
   actions: {
     showSelectedContent: function(selection){

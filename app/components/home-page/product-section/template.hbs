@@ -1,5 +1,5 @@
 <section id="product-section" class="our-products">
-  <div class="product-section-container container">
+  <div class="product-section-container container hidden">
     {{#if toggleLang.showViet}}
     <h4 class="section-heading">{{productSection.titleVn}}</h4>
     <span>♡</span>
@@ -12,7 +12,7 @@
   </div>
 
 {{! toggle catgory buttons}}
-  <div class="product-section link-button">
+  <div class="product-section link-button hidden">
     <ul>
       <li><a class="btn" {{action "showSelectedContent"}}>All</a></li>
       {{#each productCategories as |cat|}}

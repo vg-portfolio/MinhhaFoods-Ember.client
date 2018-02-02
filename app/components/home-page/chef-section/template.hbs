@@ -1,11 +1,11 @@
-<section class="chef-section">
+<section id="chef-section" class="chef-section">
   <div class="chef-container container">
     {{#if toggleLang.showViet}}
-    <h4 id="chef-section" class="section-heading">{{chefSection.titleVn}}</h4>
+    <h4 class="section-heading">{{chefSection.titleVn}}</h4>
     <span>♡</span>
     <p class="paragraph-font flow-text">{{chefSection.descriptionVn}}</p>
     {{else}}
-    <h4 id="chef-section" class="section-heading">{{chefSection.title}}</h4>
+    <h4 class="section-heading">{{chefSection.title}}</h4>
     <span>♡</span>
     <p class="paragraph-font flow-text">{{chefSection.description}}</p>
     {{/if}}
@@ -17,7 +17,7 @@
     {{#link-to 'chef-dishes' cat}}
     <div class="col s12 m4 product-column">
       <div class="product-card hoverable">
-        {{lazy-image url=cat.imageUrl class="product-image"}}
+        <img class="product-image" src="{{cat.imageUrl}}" alt="">
       </div>
       <div class="hover-info">
         <p class="center-align chef-category-name flow-text">{{cat.catType}}</p>
@@ -26,5 +26,5 @@
     {{/link-to}}
     {{/each}}
   </div>
-  
+
 </section>

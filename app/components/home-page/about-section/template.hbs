@@ -26,24 +26,7 @@
     </ul>
   </div>
 
-
-  <div class="row image-row">
-
-    <div class="col s12 m4">
-      <div class="about-card">
-        {{lazy-image url=aboutSection.imageUrl class="about-image"}}
-      </div>
-    </div>
-    <div class="col s12 m4">
-      <div class="about-card">
-        {{lazy-image url=aboutSection.imageUrl2 class="about-image"}}
-      </div>
-    </div>
-    <div class="col s12 m4">
-      <div class="about-card">
-        {{lazy-image url=aboutSection.imageUrl3 class="about-image"}}
-      </div>
-    </div>
+  {{home-page/image-row aboutSection=aboutSection}}
 
     {{!-- <div class="col s12 m4">
       <div class="card about-categories">
@@ -60,7 +43,6 @@
         {{lazy-image class="img-responsive" url=aboutSection.imageUrl3 errorText='Something went wrong.'}}
       </div>
     </div> --}}
-  </div>
 
 
   <div class="">

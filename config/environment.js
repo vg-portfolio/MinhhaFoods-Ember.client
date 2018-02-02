@@ -13,6 +13,14 @@ module.exports = function (environment) {
       'Kaushan+Script',
       'Lato:700'
     ],
+    viewportConfig: {
+      viewportTolerance: {
+        top    : 50,
+        left   : 0,
+        bottom : 50,
+        right  : 0
+      }
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

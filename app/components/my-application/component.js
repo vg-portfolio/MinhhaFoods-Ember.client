@@ -6,6 +6,10 @@ export default Ember.Component.extend({
 
   router: Ember.inject.service(),
 
+  // didEnterViewport(){
+  //   Ember.$('section').hide().fadeIn(5000);
+  // },
+
   isAdminModal: false,
 
   actions: {

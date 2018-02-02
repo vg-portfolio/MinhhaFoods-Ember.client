@@ -92178,7 +92178,7 @@ createDeprecatedModule('resolver');
 ;define('ember-in-viewport/index', ['exports', 'ember-in-viewport/mixins/in-viewport'], function (exports, _emberInViewportMixinsInViewport) {
   exports['default'] = _emberInViewportMixinsInViewport['default'];
 });
-;define('ember-in-viewport/mixins/in-viewport', ['exports', 'ember', 'ember-in-viewport/utils/can-use-dom', 'ember-in-viewport/utils/can-use-raf', 'ember-in-viewport/utils/is-in-viewport', 'ember-in-viewport/utils/check-scroll-direction'], function (exports, _ember, _emberInViewportUtilsCanUseDom, _emberInViewportUtilsCanUseRaf, _emberInViewportUtilsIsInViewport, _emberInViewportUtilsCheckScrollDirection) {
+;define('ember-in-viewport/mixins/in-viewport', ['exports', 'ember', 'ember-in-viewport/utils/can-use-dom', 'ember-in-viewport/utils/can-use-raf', 'ember-in-viewport/utils/is-in-viewport', 'ember-in-viewport/utils/check-scroll-direction', 'ember-getowner-polyfill'], function (exports, _ember, _emberInViewportUtilsCanUseDom, _emberInViewportUtilsCanUseRaf, _emberInViewportUtilsIsInViewport, _emberInViewportUtilsCheckScrollDirection, _emberGetownerPolyfill) {
   var Mixin = _ember['default'].Mixin;
   var setProperties = _ember['default'].setProperties;
   var typeOf = _ember['default'].typeOf;
@@ -92192,7 +92192,6 @@ createDeprecatedModule('resolver');
   var bind = _Ember$run.bind;
   var next = _Ember$run.next;
   var not = _ember['default'].computed.not;
-  var getOwner = _ember['default'].getOwner;
 
   var assign = _ember['default'].assign || _ember['default'].merge;
 
@@ -92215,35 +92214,13 @@ createDeprecatedModule('resolver');
     },
 
     didInsertElement: function didInsertElement() {
+      var _this = this;
+
       this._super.apply(this, arguments);
 
       if (!_emberInViewportUtilsCanUseDom['default']) {
         return;
       }
-
-      var viewportEnabled = get(this, 'viewportEnabled');
-      if (viewportEnabled) {
-        this._startListening();
-      }
-    },
-
-    willDestroyElement: function willDestroyElement() {
-      this._super.apply(this, arguments);
-      this._unbindListeners();
-    },
-
-    _buildOptions: function _buildOptions() {
-      var defaultOptions = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-      var owner = getOwner(this);
-
-      if (owner) {
-        return assign(defaultOptions, owner.lookup('config:in-viewport'));
-      }
-    },
-
-    _startListening: function _startListening() {
-      var _this = this;
 
       this._setInitialViewport(window);
       this._addObserverIfNotSpying();
@@ -92256,6 +92233,21 @@ createDeprecatedModule('resolver');
 
           _this._bindListeners(context, event);
         });
+      }
+    },
+
+    willDestroyElement: function willDestroyElement() {
+      this._super.apply(this, arguments);
+      this._unbindListeners();
+    },
+
+    _buildOptions: function _buildOptions() {
+      var defaultOptions = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+      var owner = (0, _emberGetownerPolyfill['default'])(this);
+
+      if (owner) {
+        return assign(defaultOptions, owner.lookup('config:in-viewport'));
       }
     },
 
@@ -92519,12 +92511,22 @@ createDeprecatedModule('resolver');
   exports['default'] = isInViewport;
 
   var assign = _ember['default'].assign || _ember['default'].merge;
-
   var defaultTolerance = {
     top: 0,
     left: 0,
     bottom: 0,
     right: 0
+  };
+
+  var isAxisInViewport = function isAxisInViewport(start, startTolerance, end, endTolerance, limit) {
+    // Dimensions are fully LARGER than the viewport or fully WITHIN the viewport.
+    var exceedingLimit = end + endTolerance - (start + startTolerance) > limit;
+
+    if (exceedingLimit) {
+      return start <= startTolerance && end - endTolerance >= limit;
+    }
+
+    return start + startTolerance >= 0 && end - endTolerance <= limit;
   };
 
   function isInViewport() {
@@ -92537,13 +92539,13 @@ createDeprecatedModule('resolver');
     var bottom = boundingClientRect.bottom;
     var right = boundingClientRect.right;
 
-    var tolerances = assign(assign({}, defaultTolerance), tolerance);
+    var tolerances = assign(defaultTolerance, tolerance);
     var topTolerance = tolerances.top;
     var leftTolerance = tolerances.left;
     var bottomTolerance = tolerances.bottom;
     var rightTolerance = tolerances.right;
 
-    return top + topTolerance >= 0 && left + leftTolerance >= 0 && Math.round(bottom) - bottomTolerance <= Math.round(height) && Math.round(right) - rightTolerance <= Math.round(width);
+    return isAxisInViewport(top, topTolerance, bottom, bottomTolerance, height) && isAxisInViewport(left, leftTolerance, right, rightTolerance, width);
   }
 });
 ;define("ember-inflector/index", ["module", "exports", "ember-inflector/lib/system", "ember-inflector/lib/ext/string"], function (module, exports, _system) {

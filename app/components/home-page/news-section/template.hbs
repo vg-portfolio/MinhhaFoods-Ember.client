@@ -1,5 +1,6 @@
-<section class="news-section">
-  <div id="news-section" class="product-section-container">
+<span id="news-section"></span>
+<section class="news-section hidden">
+  <div class="product-section-container">
     <span class="section-heading">Our Network</span>
     {{#if toggleLang.showViet}}
     <h4 class="section-heading">{{newsSection.titleVn}}</h4>
@@ -32,18 +33,4 @@
       </div>
     {{/each}}
   </div>
-
-{{!--
-    <div class="row">
-    {{#each newsPosts as |post|}}
-      <div class="col s12 m4">
-        <div class=" hoverable">
-          <img class="image-thumb" src="https://image.shutterstock.com/z/stock-vector-breaking-news-world-news-with-map-backgorund-breaking-news-modern-concept-tv-news-design-640991758.jpg" alt="">
-        </div>
-        <h5>{{post.title}}</h5>
-        <p class="truncate">{{post.description}}</p>
-      </div>
-    {{/each}}
-    </div> --}}
-
 </section>

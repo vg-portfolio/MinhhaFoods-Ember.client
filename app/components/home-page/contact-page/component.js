@@ -1,7 +1,12 @@
 import Ember from 'ember';
+import InViewportMixin from 'ember-in-viewport';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(InViewportMixin, {
   router: Ember.inject.service(),
+
+  didEnterViewport(){
+    this.$('.contact-section').toggle(2000);
+  },
 
   actions: {
     scrollTo(section, transition, model){

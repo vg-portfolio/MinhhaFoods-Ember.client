@@ -8,6 +8,10 @@ export default Ember.Component.extend({
   router: Ember.inject.service(),
   language: Ember.inject.service('language-toggle'),
 
+  didInsertElement(){
+    this.$('#navbar').toggle(2500);
+  },
+
   actions: {
     signOut () {
       this.sendAction('signOut');

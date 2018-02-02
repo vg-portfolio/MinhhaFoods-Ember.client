@@ -8223,17 +8223,15 @@ body {
   font-family: 'Montserrat', '400'; }
 
 nav {
+  background-color: #d0eca0;
   position: absolute;
-  background-color: #d0eca0; }
+  background: rgba(255, 255, 255, 0);
+  box-shadow: none; }
   nav #navbar {
-    position: relative;
-    background: rgba(255, 255, 255, 0);
     z-index: 1000; }
-  nav img {
-    min-width: 25%;
-    float: left;
-    padding-left: 15em;
-    position: absolute; }
+
+.hidden {
+  display: none; }
 
 a {
   line-height: 0;
@@ -8259,10 +8257,10 @@ section {
   padding: 5rem 3rem;
   text-align: center; }
 
-#banner-image {
-  display: inline-block;
-  position: relative; }
-  #banner-image img {
+.banner-image {
+  display: block;
+  width: 100%; }
+  .banner-image img {
     width: 100%; }
 
 #banner-image-dish {
@@ -8292,8 +8290,8 @@ section {
   font-family: 'Kaushan Script'; }
 
 .sub-nav-links {
-  text-transform: uppercase;
   color: black;
+  font-size: 1.5em;
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-family: "Kaushan Script";
@@ -8327,6 +8325,9 @@ section.about-us {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+.paragraph-font {
+  font-size: 1.2em !important; }
 
 .our-products {
   padding-top: 3rem;
@@ -8367,13 +8368,13 @@ section.about-us {
   opacity: 0.5; }
 
 .product-details {
-  padding-top: 5%; }
+  padding-top: 10%; }
 
 .modal-content .card-panel {
   background-color: #d0eca0; }
 
 .chef-section .section-heading {
-  margin-top: 5rem; }
+  margin-top: 1rem; }
 
 .chef-category-name {
   color: black; }
@@ -8381,9 +8382,14 @@ section.about-us {
 .chef-dishes {
   position: relative; }
   .chef-dishes .section-heading {
-    margin-top: 5rem; }
+    margin-top: 0; }
   .chef-dishes .dishes.row {
     margin-top: 20%; }
+
+.chef-banner {
+  position: absolute;
+  height: 35rem;
+  overflow-y: hidden; }
 
 .news-posts-container {
   margin-top: 2rem; }
@@ -8392,15 +8398,50 @@ section.about-us {
   width: 100%; }
 
 .news-card {
-  position: relative; }
+  position: relative;
+  height: 15rem;
+  overflow: hidden; }
+  .news-card .news-image {
+    width: 100%;
+    height: 100%; }
 
 .news-date-badge {
   position: absolute;
-  z-index: 1000;
+  z-index: 99;
   right: 0; }
+
+.card-panel.news-date-badge {
+  padding: 0.2rem 0.5rem;
+  margin: 0;
+  background-color: #d0eca0; }
+
+.news-description {
+  height: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden; }
+
+.image-url {
+  overflow-wrap: break-word; }
 
 .chef-footer-link {
   color: white; }
+
+#contact-section {
+  position: relative; }
+  #contact-section .row {
+    margin-bottom: 0; }
+
+.wrapper {
+  position: absolute;
+  top: -2.4rem; }
+  .wrapper .scroll-to-top {
+    border-top-left-radius: 150rem;
+    border-top-right-radius: 150rem; }
+
+button.scroll-to-top {
+  background-color: #0d1725; }
 
 .admin-dashboard {
   background-color: #d0eca0;

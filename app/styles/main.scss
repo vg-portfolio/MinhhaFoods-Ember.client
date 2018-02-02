@@ -12,7 +12,9 @@ nav {
     z-index: 1000;
   }
 }
-
+.hidden{
+  display: none;
+}
 a {
   line-height: 0;
   display: block;
@@ -189,7 +191,7 @@ section.about-us {
 //CHEF SECTION
 .chef-section {
   .section-heading {
-    margin-top: 5rem;
+    margin-top: 1rem;
   }
 }
 .chef-category-name {
