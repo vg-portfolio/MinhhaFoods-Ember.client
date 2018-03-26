@@ -11,13 +11,12 @@
     {{/if}}
   </div>
 
-
   <div class="image-row row">
     {{#each chefCategories as |cat|}}
     {{#link-to 'chef-dishes' cat}}
     <div class="col s12 m4 product-column">
       <div class="product-card hoverable">
-        <img class="product-image" src="{{cat.imageUrl}}" alt="">
+        <img class="product-image" src="{{cat.imageUrl}}">
       </div>
       <div class="hover-info">
         <p class="center-align chef-category-name flow-text">{{cat.catType}}</p>

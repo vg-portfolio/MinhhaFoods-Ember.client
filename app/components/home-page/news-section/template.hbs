@@ -1,5 +1,5 @@
 <span id="news-section"></span>
-<section class="news-section hidden">
+<section class="news-section">
   <div class="product-section-container">
     <span class="section-heading">Our Network</span>
     {{#if toggleLang.showViet}}
@@ -19,7 +19,8 @@
           {{#if post.newsDate}}
           <div class="card-panel news-date-badge badge">{{post.newsDate}}</div>
           {{/if}}
-          {{lazy-image url=post.imageUrl class="news-image"}}
+          <img src="{{post.imageUrl}}" class="news-image">
+          {{!-- {{lazy-image url=post.imageUrl class="news-image"}} --}}
         </div>
         <div class="center-align">
           {{#if toggleLang.showViet}}

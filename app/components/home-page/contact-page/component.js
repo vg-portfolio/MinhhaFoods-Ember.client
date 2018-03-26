@@ -1,12 +1,11 @@
 import Ember from 'ember';
-import InViewportMixin from 'ember-in-viewport';
+// import InViewportMixin from 'ember-in-viewport';
 
-export default Ember.Component.extend(InViewportMixin, {
+export default Ember.Component.extend({
   router: Ember.inject.service(),
-
-  didEnterViewport(){
-    this.$('.contact-section').toggle(2000);
-  },
+  // didEnterViewport(){
+  //   this.$('.contact-section').toggle(2000);
+  // },
 
   actions: {
     scrollTo(section, transition, model){
@@ -21,18 +20,7 @@ export default Ember.Component.extend(InViewportMixin, {
         }, 1000);
         console.log("done");
       }
-      }
+    }
   }
-  // chefCat: [],
-  // productCat: [],
-  //
-  // loadCategories: function(){
-  //    this.get('categories').forEach((item) => {
-  //     if (item.data.categorizableType === 'ChefSection') {
-  //       this.get('chefCat').pushObject(item);
-  //     } else {
-  //       this.get('productCat').pushObject(item);
-  //     }
-  //   });
-  // }.on('init'),
+  
 });

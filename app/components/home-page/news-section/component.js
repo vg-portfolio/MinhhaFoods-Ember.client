@@ -1,10 +1,6 @@
 import Ember from 'ember';
-import InViewportMixin from 'ember-in-viewport';
+// import InViewportMixin from 'ember-in-viewport';
 
-export default Ember.Component.extend(InViewportMixin, {
+export default Ember.Component.extend({
   toggleLang: Ember.inject.service(),
-
-  didEnterViewport(){
-    this.$('.news-section').toggle(2000);
-  },
 });
