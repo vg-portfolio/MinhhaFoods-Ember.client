@@ -10,9 +10,12 @@
     <div class="row">
       <div class="col s12 m6 offset-m3 white-space">
         <h5>{{contact.title}}</h5>
-        <a target="_blank" href="{{contact.fbLink}}">
+        {{#external-link href=contact.fbLink}}
           <img id="facebook-icon" src="https://centredactionbenevolecowansville.files.wordpress.com/2017/09/logo-facebook.png" alt="">
-        </a>
+        {{/external-link}}
+        {{!-- <a target="_blank" href="{{contact.fbLink}}">
+          <img id="facebook-icon" src="https://centredactionbenevolecowansville.files.wordpress.com/2017/09/logo-facebook.png" alt="">
+        </a> --}}
         <p>{{contact.description}}</p>
       </div>
     </div>

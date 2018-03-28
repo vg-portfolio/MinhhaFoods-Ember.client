@@ -64,7 +64,7 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     ENV.rootURL = '/';
-    ENV.locationType = 'hash';
+    ENV.locationType = 'auto';
     ENV.apiHost = 'https://minha-api.herokuapp.com';
   }
 
