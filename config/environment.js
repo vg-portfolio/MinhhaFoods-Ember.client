@@ -20,7 +20,7 @@ module.exports = function (environment) {
     //     bottom : 50,
     //     right  : 0
     //   }
-    },
+    // },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
