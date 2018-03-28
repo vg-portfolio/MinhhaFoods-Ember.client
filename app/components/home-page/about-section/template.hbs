@@ -4,11 +4,11 @@
     {{#if toggleLang.showViet}}
     <h4 class="section-heading">{{aboutSection.titleVn}}</h4>
     <span>♡</span>
-    <p class="paragraph-font flow-text">{{aboutSection.descriptionVn}}</p>
+    <p class="white-space paragraph-font flow-text">{{aboutSection.descriptionVn}}</p>
     {{else}}
     <h4 class="section-heading">{{aboutSection.title}}</h4>
     <span>♡</span>
-    <p class="paragraph-font flow-text">{{aboutSection.description}}</p>
+    <p class="white-space paragraph-font flow-text">{{aboutSection.description}}</p>
     {{/if}}
   </div>
 
@@ -63,9 +63,9 @@
     {{/md-modal}}
     {{else}}
       {{#if toggleLang.showViet}}
-      <p>{{selectedContent.descriptionVn}}</p>
+      <p class="white-space">{{selectedContent.descriptionVn}}</p>
       {{else}}
-      <p>{{selectedContent.description}}</p>
+      <p class="white-space">{{selectedContent.description}}</p>
       {{/if}}
     {{/if}}
   </div>
