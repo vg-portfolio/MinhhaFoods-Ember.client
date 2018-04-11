@@ -15,7 +15,7 @@
   <div class="row center-align">
     {{#each newsPosts as |post|}}
     <div class="col s12 m4">
-        <div class="news-card hoverable">
+        <div class="news-card hoverable" {{action "showModal" post}}>
           {{#if post.newsDate}}
           <div class="card-panel news-date-badge badge">{{post.newsDate}}</div>
           {{/if}}
@@ -34,4 +34,20 @@
       </div>
     {{/each}}
   </div>
+
+
+{{! modal to display product details}}
+  {{#if modalIsOpen}}
+  {{#md-modal close='closeModal' class="new-modal"}}
+      <div class="modal-content center-align">
+        {{#if toggleLang.showViet}}
+        <h4 class="section-heading">{{newsObject.titleVn}}</h4>
+        <p>{{newsObject.descriptionVn}}</p>
+        {{else}}
+        <h4 class="section-heading">{{newsObject.title}}</h4>
+        <p>{{newsObject.description}}</p>
+        {{/if}}
+      </div>
+  {{/md-modal}}
+  {{/if}}
 </section>

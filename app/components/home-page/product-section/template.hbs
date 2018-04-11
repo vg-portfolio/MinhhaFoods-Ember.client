@@ -13,12 +13,10 @@
 
 {{! toggle catgory buttons}}
   <div class="product-section link-button">
-    <ul>
-      <li><a class="btn" {{action "showSelectedContent"}}>All</a></li>
-      {{#each productCategories as |cat|}}
-        <li><a class="btn" {{action "showSelectedContent" cat}}>{{cat.catType}}</a></li>
-      {{/each}}
-    </ul>
+    <a class="btn" {{action "showSelectedContent"}}>All</a>
+    {{#each productCategories as |cat|}}
+    <a class="btn" {{action "showSelectedContent" cat}}>{{cat.catType}}</a>
+    {{/each}}
   </div>
 {{! row of product images}}
   <div class="product-image-row row">

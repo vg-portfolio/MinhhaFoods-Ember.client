@@ -11,7 +11,8 @@ module.exports = function (environment) {
     googleFonts: [
       'Montserrat:400,500',
       'Kaushan+Script',
-      'Lato:700'
+      'Lato:700',
+      'Playfair+Display: 700'
     ],
     // viewportConfig: {
     //   viewportTolerance: {

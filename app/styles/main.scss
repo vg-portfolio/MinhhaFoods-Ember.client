@@ -21,7 +21,8 @@ a {
 }
 
 ul.navbar-links {
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
+  margin-right: 1.2rem;
   a {
     font-size: 1.5em;
     font-weight: 600;
@@ -88,7 +89,8 @@ section {
 }
 .section-heading {
   margin-top: 0.3rem;
-  font-family: 'Kaushan Script';
+  font-family: 'Playfair Display';
+  font-weight: 700;
 }
 
 .sub-nav-links {
@@ -143,9 +145,10 @@ section.about-us {
 .our-products {
   padding-top: 3rem;
   padding-bottom: 0;
-  a {
+  .product-section a {
     font-family: 'Lato';
     font-weight: 700;
+    margin-bottom: 0.5rem;
   }
   .row {
     margin-bottom: 0;
@@ -309,4 +312,13 @@ button.admin-navigation {
   right: 0;
   z-index: 100;
   top: 10rem;
+}
+
+.logo {
+  display: inline-block;
+  margin-left: 2.5rem;
+  #logo {
+    height: 9rem;
+    width: auto;
+  }
 }
