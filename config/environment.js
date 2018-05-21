@@ -7,7 +7,6 @@ module.exports = function (environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
-    apiHost: 'http://localhost:3000/',
     googleFonts: [
       'Montserrat:400,500',
       'Kaushan+Script',
@@ -65,8 +64,8 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     ENV.rootURL = '/';
-    ENV.locationType = 'auto';
-    ENV.apiHost = 'https://minha-api.herokuapp.com';
+    ENV.locationType = 'hash';
+    ENV.apiHost = 'https://minha-api.herokuapp.com/';
   }
 
   return ENV;
