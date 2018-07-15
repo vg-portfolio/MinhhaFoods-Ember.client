@@ -34,34 +34,9 @@
   </div>
 {{! modal to display product details}}
   {{#if modalIsOpen}}
-  {{#md-modal close='closeModal' class="test-modal"}}
-      <div class="modal-content center-align">
-          <div class="row">
-            <div class="col s12 m6">
-              <div class="row">
-                <div class="s12">
-                  <img class="image-thumb" src="{{displayedObject.imageUrl}}" alt="">
-                </div>
-                <div class="col s12">
-                  <div class="card-panel center-align flow-text">{{displayedObject.title}}</div>
-                  <p>Volume: {{displayedObject.volume}} mL</p>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6">
-              <div class="product-details">
-                <p class="white-space">
-                  {{#if toggleLang.showViet}}
-                  {{displayedObject.detailsVn}}
-                  {{else}}
-                  {{displayedObject.details}}
-                  {{/if}}
-                </p>
-              </div>
-            </div>
-          </div>
-      </div>
-  {{/md-modal}}
+  {{home-page/product-section/product-modal
+    displayedObject=displayedObject
+    closeModal="closeModal"}}
   {{/if}}
   <!-- Adds flex box here to dynamically populate the the box with products without breaking layout-->
 

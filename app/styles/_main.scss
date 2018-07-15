@@ -187,14 +187,24 @@ section.about-us {
   opacity: 0.5;
 }
 
- .product-details {
-   padding-top: 10%;
- }
-
 .modal-content {
   .card-panel {
     background-color: $theme-color;
   }
+}
+
+.carousel-buttons,
+.carousel{
+  display: inline-block;
+}
+.carousel{
+  margin: 0 auto;
+  width: 80%;
+  height: 220px;
+}
+.carousel-item{
+  width: 70% !important;
+  padding-top: 2rem;
 }
 
 

@@ -1,0 +1,37 @@
+{{#md-modal close='closeModal' class="test-modal"}}
+    <div class="modal-content center-align">
+      <div class="valign-wrapper">
+        <button class="btn btn-floating carousel-buttons" type="button" name="button" {{action "scrollLeft"}}><i class="material-icons">navigate_before</i></button>
+          <div class="carousel">
+            <a class="carousel-item" href="#one!"><img src="{{displayedObject.imageUrl}}"></a>
+            <a class="carousel-item" href="#two!"><img src="{{displayedObject.imageUrl}}"></a>
+            <a class="carousel-item" href="#three!"><img src="{{displayedObject.imageUrl}}"></a>
+            <a class="carousel-item" href="#four!"><img src="{{displayedObject.imageUrl}}"></a>
+            <a class="carousel-item" href="#five!"><img src="{{displayedObject.imageUrl}}"></a>
+          </div>
+          <button class="btn btn-floating carousel-buttons" type="button" name="button" {{action "scrollRight"}}><i class="material-icons">navigate_next</i></button>
+      </div>
+
+        <div class="row">
+            {{!-- <img class="image-thumb" src="{{displayedObject.imageUrl}}" alt=""> --}}
+            <div class="col s12 m10 offset-m1">
+              <div class="card-panel center-align">
+                <span class="flow-text">{{displayedObject.title}}</span>
+                <br>
+                <span>Volume: {{displayedObject.volume}} mL</span>
+              </div>
+            </div>
+          <div class="col s12">
+            <div class="product-details">
+              <p class="white-space">
+                {{#if toggleLang.showViet}}
+                {{displayedObject.detailsVn}}
+                {{else}}
+                {{displayedObject.details}}
+                {{/if}}
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+{{/md-modal}}
