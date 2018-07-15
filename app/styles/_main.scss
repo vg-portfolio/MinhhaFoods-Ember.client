@@ -128,7 +128,9 @@ section.about-us {
     }
   }
 }
-
+.bold {
+    margin: 0.5rem;
+}
 .awards-flex {
   display: flex;
   flex-wrap: nowrap;
@@ -148,7 +150,7 @@ section.about-us {
   .product-section a {
     font-family: 'Lato';
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
   }
   .row {
     margin-bottom: 0;
@@ -205,6 +207,11 @@ section.about-us {
 .carousel-item{
   width: 70% !important;
   padding-top: 2rem;
+}
+
+//Produc product-details
+.product-detail-modal {
+  margin-top: 1rem;
 }
 
 
