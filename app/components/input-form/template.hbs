@@ -162,7 +162,16 @@
         <p>Category: {{model.productCategory.catType}}</p>
       </div>
       <div class="row">
-        {{md-textarea value=model.imageUrl label="Image Url" class="col s12"}}
+        {{md-textarea value=model.imageUrl label="Main Image Url" class="col s12"}}
+      </div>
+      <div class="row">
+        {{md-textarea value=model.imageUrl2 label="Image Url 2" class="col s12"}}
+      </div>
+      <div class="row">
+        {{md-textarea value=model.imageUrl3 label="Image Url 3" class="col s12"}}
+      </div>
+      <div class="row">
+        {{md-textarea value=model.imageUrl4 label="Image Url 4" class="col s12"}}
       </div>
       <button {{action "update" model}} type="button" name="button" class="btn teal">Save</button>
       <button {{action "delete" model}} type="button" name="button" class="btn red">X</button>
