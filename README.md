@@ -1,33 +1,5 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
-
-# ember-template
-
-A template for starting projects with Ember as a client. Build pipeline and
-development server provided by `ember-cli`. Bootstrap and Sass included.
-Comes with authorizations
 
 ## Updating Dependencies
-
-At the beginning of each cohort update [`package.json`](package.json):
-### npm
--   replace all dependent package versions in `package.json` with a glob (`*`).
--   `rm -r node_modules`.
--   `npm update --save`.
--   `npm update --save-dev`.
--   `npm install`
-
-### bower
-Currently bower [cannot automatically save updated versions](https://github.com/bower/bower/issues/2348) to `bower.json`.
-
--   `rm -r bower_components`
--   `bower update`
--   `bower list`
--   Take the new version numbers from the top level of the list and paste
-    them into `bower.json`
--   `bower install`
--   `ember test`
-
-Fix errors and conflicts as necessary.
 
 ## Dependencies
 
@@ -44,20 +16,6 @@ At the beginning of each cohort, update this template by upgrading `ember-cli`
 and generating a new Ember application in another location. Copy files over a
 handful at a time and check diffs. You should preserve the pods structure and
 other customizations, including Bootstrap.
-
-## Installation
-
-1.  [Download](../../archive/master.zip) this template.
-1.  Unzip and rename the template directory.
-1.  Empty [`README.md`](README.md) and fill with your own content.
-1.  Move into the new project and `git init`.
-1.  Replace all instances of `'minh-ha-foods'` with your app name. This
-    includes [`package.json`](package.json), [`bower.json`](bower.json),
-    [`app/index.html`](app/index.html), [`tests/index.html`](tests/index.html),
-    and [`config/environment.js`](config/environment.js), possibly others.
-1.  Install dependencies with `npm install` and `bower install`.
-1.  Run the development server with `ember server`. Use the `--proxy` flag to
-    avoid writing development-specific CORS and CSP settings.
 
 ## Structure
 
