@@ -10,7 +10,7 @@ If you have not installed phantomjs, you will need to install it globally:
 
 -   [ember.js](http://emberjs.com/)
 -   [ember-cli](http://www.ember-cli.com/)
--   [Bootstrap](http://getbootstrap.com)
+-   [Materialize]
 
 At the beginning of each cohort, update this template by upgrading `ember-cli`
 and generating a new Ember application in another location. Copy files over a
